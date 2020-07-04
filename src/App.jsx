@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 
 import Navbar from './app/Navbar';
 import Landing from './pages/Home';
+import Footer from './pages/Footer';
 
 const App = () => {
     return (
@@ -11,6 +12,7 @@ const App = () => {
             <Switch>
                 <Route path="/" component={Landing} exact />
             </Switch>
+            <Footer />
         </Fragment>
     )
 }

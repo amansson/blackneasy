@@ -1,0 +1,15 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: $color-nav-background;
+    color: $color-white;
+    padding: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    justify-content: center;
+    column-gap: 50px;
+}
