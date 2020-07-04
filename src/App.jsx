@@ -3,15 +3,19 @@ import { Switch, Route } from 'react-router-dom';
 
 import Navbar from './app/Navbar';
 import Footer from './app/Footer';
-import Landing from './pages/Home';
+import Home from './pages/Home';
+import Animal from './pages/Animal';
 
 const App = () => {
     return (
         <Fragment>
             <Navbar />
-            <Switch>
-                <Route path="/" component={Landing} exact />
-            </Switch>
+            <div id="main">
+                <Switch>
+                    <Route path="/" component={Home} exact />
+                    <Route path="/animal" component={Animal} exact />
+                </Switch>
+            </div>
             <Footer />
         </Fragment>
     )

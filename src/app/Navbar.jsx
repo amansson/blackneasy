@@ -9,7 +9,7 @@ const Navbar = () => {
             <label className="logo">Black and Easy</label>
             <nav className="links">
                 <NavLink exact to="/" className="link" activeClassName="link active">Home</NavLink>
-                <NavLink exact to="/about" className="link" activeClassName="link active">About</NavLink>
+                <NavLink exact to="/animal" className="link" activeClassName="link active">Djur</NavLink>
                 <NavLink exact to="/services" className="link" activeClassName="link active">Services</NavLink>
                 <NavLink exact to="/contact" className="link" activeClassName="link active">Contact</NavLink>
                 <NavLink exact to="/feedback" className="link" activeClassName="link active">Feedback</NavLink>
