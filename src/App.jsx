@@ -5,6 +5,8 @@ import Navbar from './app/Navbar';
 import Footer from './app/Footer';
 import Home from './pages/Home';
 import Animal from './pages/Animal';
+import Certificate from './pages/Certificate';
+
 
 const App = () => {
     return (
@@ -14,6 +16,7 @@ const App = () => {
                 <Switch>
                     <Route path="/" component={Home} exact />
                     <Route path="/animal" component={Animal} exact />
+                    <Route path="/certificate" component={Certificate} exact />
                 </Switch>
             </div>
             <Footer />
