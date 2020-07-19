@@ -1,20 +1,27 @@
-import React, { Fragment } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { FaAlignRight } from 'react-icons/fa';
 
 const Navbar = () => {
+    const [sidebarOpen, setSidebarOpen] = useState(false);
+
+    const toggleSidebar = () => {
+        setSidebarOpen(!sidebarOpen);
+        console.log(sidebarOpen);
+    };
+
     return (
         <div className="nav">
-            <label className="logo">Black and Easy</label>
-            <nav className="links">
-                <NavLink exact to="/" className="link" activeClassName="link active">Home</NavLink>
+            <NavLink exact to="/" className="logo">Black and Easy</NavLink>
+            <nav className={sidebarOpen ? "side" : "top"}>
+                <NavLink exact to="/" className="link" activeClassName="link active">Hem</NavLink>
                 <NavLink exact to="/animal" className="link" activeClassName="link active">Djur</NavLink>
-                <NavLink exact to="/services" className="link" activeClassName="link active">Services</NavLink>
-                <NavLink exact to="/contact" className="link" activeClassName="link active">Contact</NavLink>
-                <NavLink exact to="/feedback" className="link" activeClassName="link active">Feedback</NavLink>
+                <NavLink exact to="/certificate" className="link" activeClassName="link active">MH och HD</NavLink>
+                <NavLink exact to="/puppy" className="link" activeClassName="link active">Valpar</NavLink>
+                <NavLink exact to="/brood" className="link" activeClassName="link active">Kullar</NavLink>
+                <NavLink exact to="/photo" className="link" activeClassName="link active">Fotocollage</NavLink>
             </nav>
-            <a href="#" className="cta"><button>Contact</button></a>
+            <button onClick={toggleSidebar} className="nav-button"><FaAlignRight /></button>
         </div>
     )
 }
