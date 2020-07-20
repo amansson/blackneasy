@@ -6,6 +6,7 @@ import Footer from './app/Footer';
 import Home from './pages/Home';
 import Animal from './pages/Animal';
 import Certificate from './pages/Certificate';
+import Puppies from './pages/Puppies';
 
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
                     <Route path="/" component={Home} exact />
                     <Route path="/animal" component={Animal} exact />
                     <Route path="/certificate" component={Certificate} exact />
+                    <Route path="/puppies" component={Puppies} exact />
                 </Switch>
             </div>
             <Footer />

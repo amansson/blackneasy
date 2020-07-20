@@ -17,7 +17,7 @@ const Navbar = () => {
                 <NavLink exact to="/" className="link" activeClassName="link active">Hem</NavLink>
                 <NavLink exact to="/animal" className="link" activeClassName="link active">Djur</NavLink>
                 <NavLink exact to="/certificate" className="link" activeClassName="link active">MH och HD</NavLink>
-                <NavLink exact to="/puppy" className="link" activeClassName="link active">Valpar</NavLink>
+                <NavLink exact to="/puppies" className="link" activeClassName="link active">Valpar</NavLink>
                 <NavLink exact to="/brood" className="link" activeClassName="link active">Kullar</NavLink>
                 <NavLink exact to="/photo" className="link" activeClassName="link active">Fotocollage</NavLink>
             </nav>

@@ -7,7 +7,7 @@
 .card-profile {
     overflow: hidden;
     background: white;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 15px $box-shadow;
 
     .body {
         padding: 20px;
@@ -41,7 +41,7 @@
     .card {
         position: relative;
         width: 100%;
-        box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 30px $box-shadow;
         
         img {
             display: block;
@@ -73,6 +73,25 @@
     }
 }
 
+.cards-puppies {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
+
+    .image-puppy img {
+        border-radius: 5px;
+        box-shadow: 0 0 30px $box-shadow;
+        
+        &:hover {
+            filter: brightness(100%);
+            @extend .zoom-background-hover;
+            cursor: pointer;
+            object-fit: cover;
+        }
+    }
+
+}
+
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
     .cards {
@@ -81,6 +100,10 @@
 
     .cards-certificate {
         grid-template-columns: 1fr 1fr;
+    }
+    
+    .cards-puppies {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -93,6 +116,10 @@
     .cards-certificate {
         grid-template-columns: 1fr 1fr 1fr;
     }
+
+    .cards-puppies {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -103,6 +130,10 @@
 
     .cards-certificate {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .cards-puppies {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -115,6 +146,10 @@
     .cards-certificate {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     }
+
+    .cards-puppies {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 // Extra large devices (large desktops, 1200px and up)
@@ -125,5 +160,9 @@
 
     .cards-certificate {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .cards-puppies {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
