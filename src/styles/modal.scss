@@ -1,0 +1,43 @@
+.modalBackground {
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.4s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modalShow {
+    opacity: 1;
+    pointer-events: visible;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.modalInner {
+    width: 90%;
+    max-width: calc(100%-60px);
+    margin: 80px auto;
+
+    img {
+        width: 100%;
+    }
+
+    h2 {
+        position: relative;
+        bottom: 100px;
+        text-align: center;
+        color: $color-white;
+    }
+
+    .exitButton {
+        position: relative;        
+        top: 50px;
+        left: 94%;
+        font-size: 20px;
+        background-color: transparent;
+        border: 0;
+        color: white;
+    }
+}
