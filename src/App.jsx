@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Animal from './pages/Animal';
 import Certificate from './pages/Certificate';
 import Puppies from './pages/Puppies';
+import Gallery from './pages/Gallery';
 
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
                     <Route path="/animal" component={Animal} exact />
                     <Route path="/certificate" component={Certificate} exact />
                     <Route path="/puppies" component={Puppies} exact />
+                    <Route path="/gallery" component={Gallery} exact />
                 </Switch>
             </div>
             <Footer />
