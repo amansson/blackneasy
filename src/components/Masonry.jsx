@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useState, Fragment } from 'react';
+import Modal from './Modal';
+import MasonryContent from './MasonryContent';
 
 const Masonry = (props) => {
     const columnWrapper = {};
@@ -12,15 +14,15 @@ const Masonry = (props) => {
     for (let i = 0; i < props.children.length; i++) {
         const columnIndex = i % props.columns;
         columnWrapper[`column${columnIndex}`].push(
-            <div className="child">
-                {props.children[i]}
-            </div>
+            <Fragment key={i}>
+                <MasonryContent content={props.children[i]} />
+            </Fragment>
         );
     };
 
     for (let i = 0; i < props.columns; i++) {
         result.push(
-            <div className="column">
+            <div key={i} className="column">
                 {columnWrapper[`column${i}`]}
             </div>
         );
