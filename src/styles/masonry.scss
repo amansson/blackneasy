@@ -1,13 +1,13 @@
 .masonry {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 50px;
-
+    column-gap: 20px;
+    
     .column {
         .child {
             box-shadow: 0 0 30px $box-shadow;
-            margin-bottom: 20px;
             background-color: transparent;
+            margin-bottom: 20px;
 
             img {
                 width: 100%;
