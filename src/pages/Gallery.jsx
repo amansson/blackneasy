@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import Masonry from '../components/Masonry';
 import FetchData from '../components/FetchData';
 import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
@@ -10,19 +10,17 @@ const Gallery = () => {
     }
 
     return (
-        <div>
-            <Masonry columns={3} gap={25}>
+        <Fragment>
+            <Masonry columns={4}>
             {
                 imageData.response.resources.map(image => {
                     return (
-                        
-                            <Image width="200px" cloudName="blackneasy" publicId={image.public_id} />
-                        
+                        <Image key={image.public_id} cloudName="blackneasy" publicId={image.public_id} />
                     )
                 })
             }
             </Masonry>
-        </div>
+        </Fragment>
     )
 }
 

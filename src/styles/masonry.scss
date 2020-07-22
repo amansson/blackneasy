@@ -1,20 +1,27 @@
 .masonry {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
 
-    .child {
-        box-shadow: 0 0 30px $box-shadow;
-        margin-bottom: 20px;
-
-        img {
-            width: 100%;
-            margin: 0;
-            padding: 0;
-        }
-    }
-    
     .column {
-        padding: 0 20px;        
+        .child {
+            box-shadow: 0 0 30px $box-shadow;
+            margin-bottom: 20px;
+            background-color: transparent;
+
+            img {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+                border-radius: 5px;
+
+                &:hover {
+                    filter: brightness(100%);
+                    @extend .zoom-background-hover;
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
 
@@ -35,20 +42,20 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
     .masonry {
-        grid-template-columns: 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     .masonry {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
     .masonry {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
