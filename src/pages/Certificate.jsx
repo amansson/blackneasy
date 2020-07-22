@@ -11,7 +11,7 @@ const Certificate = () => {
     console.log(imageData);
 
     return (
-        <Fragment>
+        <div className="wrapper">
             <h1>MH</h1>
             <div className="cards-certificate">
                 {
@@ -22,7 +22,7 @@ const Certificate = () => {
                     })
                 }
             </div>
-        </Fragment>
+        </div>
     )
 }
 

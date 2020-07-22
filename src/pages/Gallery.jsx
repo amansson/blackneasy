@@ -10,7 +10,7 @@ const Gallery = () => {
     }
 
     return (
-        <Fragment>
+        <div className="wrapper">
             <Masonry columns={4}>
             {
                 imageData.response.resources.map(image => {
@@ -20,7 +20,7 @@ const Gallery = () => {
                 })
             }
             </Masonry>
-        </Fragment>
+        </div>
     )
 }
 

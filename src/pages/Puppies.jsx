@@ -10,16 +10,14 @@ const Puppies = () => {
     }
 
     return (
-        <div>
-            <div className="cards-puppies">
-                {
-                    imageData.response.resources.map(image => {
-                        return (
-                            <Puppy key={image.public_id} image_id={image.public_id} />
-                        )
-                    })
-                }
-            </div>
+        <div className="wrapper cards-puppies">
+            {
+                imageData.response.resources.map(image => {
+                    return (
+                        <Puppy key={image.public_id} image_id={image.public_id} />
+                    )
+                })
+            }
         </div>
     )
 }
