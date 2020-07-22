@@ -4,7 +4,7 @@ import AnimalCard from '../components/AnimalCard';
 
 const Animal = () => {
     return (
-        <div className="cards">
+        <div className="wrapper cards">
             <AnimalCard name={"Jixie"} />        
             <AnimalCard name={"Sample"} />        
             <AnimalCard name={"Jixie"} />        

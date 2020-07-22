@@ -3,11 +3,13 @@ import Cloudinary from '../components/Cloudinary';
 
 const Landing = () => {
     return (
-        <div>
-            <h1>Landing Page</h1>
+        <Fragment>
     
-            <Cloudinary />
+            <div className="wrapper">
+                <h1>Parning</h1>
+                <BreedJixie />
         </div>
+        </Fragment>
     )
 }
 
