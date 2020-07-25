@@ -42,7 +42,7 @@
         position: relative;
         width: 100%;
         box-shadow: 0 0 30px $box-shadow;
-        
+
         img {
             display: block;
             width: 100%;
@@ -56,12 +56,12 @@
                 @extend .zoom-background-hover;
             }
         }
-        
+
         .caption {
             position: absolute;
             color: #fff;
             font-size: 1.2em;
-            text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -82,7 +82,7 @@
         border-radius: 5px;
         box-shadow: 0 0 30px $box-shadow;
         width: 100%;
-        
+
         &:hover {
             filter: brightness(100%);
             @extend .zoom-background-hover;
@@ -90,7 +90,63 @@
             object-fit: cover;
         }
     }
+}
 
+.cards-kennel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+
+    .card {
+        width: 100%;
+
+        &:hover {
+            filter: brightness(100%);
+            @extend .zoom-background-hover;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-white;
+        }
+
+        img {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            box-shadow: 0 0 30px $box-shadow;
+            width: 100%;
+        }
+
+        .caption {
+            background-color: black;
+            opacity: 0.8;
+            padding: 10px;
+            text-align: center;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}
+
+.cards-meetup {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
+
+    .image-meetup img {
+        border-radius: 5px;
+        box-shadow: 0 0 30px $box-shadow;
+        width: 100%;
+
+        &:hover {
+            filter: brightness(100%);
+            @extend .zoom-background-hover;
+            cursor: pointer;
+            object-fit: cover;
+        }
+    }
 }
 
 // Smallest device
@@ -102,7 +158,7 @@
     .cards-certificate {
         grid-template-columns: 1fr 1fr;
     }
-    
+
     .cards-puppies {
         grid-template-columns: 1fr;
     }

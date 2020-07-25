@@ -20,6 +20,7 @@ const Navbar = () => {
                 <NavLink exact to="/puppies" className="link" activeClassName="link active">Valpar</NavLink>
                 <NavLink exact to="/brood" className="link" activeClassName="link active">Kullar</NavLink>
                 <NavLink exact to="/gallery" className="link" activeClassName="link active">Fotocollage</NavLink>
+                <NavLink exact to="/kennel" className="link" activeClassName="link active">Kennel Träff</NavLink>
             </nav>
             <button onClick={toggleSidebar} className="nav-button"><FaAlignRight /></button>
         </div>
