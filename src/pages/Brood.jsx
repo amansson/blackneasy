@@ -38,7 +38,7 @@ const Brood = () => {
     return (
         <Fragment>
             <div className="wrapper">
-                <h2 className="text-align-center">Klicka på tikarna för att se deras valparna</h2>
+                <h2 className="notice-action">Klicka på tikarna för att se deras valparna</h2>
                 <div className="cards-brood">
                     <div className="card" onClick={toggleMother1}>
                         <Image cloudName="blackneasy" publicId="easy" alt="Easy" />

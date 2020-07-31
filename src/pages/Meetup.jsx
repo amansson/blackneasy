@@ -29,7 +29,7 @@ const Meetup = () => {
 
     return (
         <div className="wrapper">
-            <h2 className="meetup-caption">Klicka  nedan för olika kennel träffar</h2>
+            <h2 className="notice-action">Klicka  nedan för olika kennel träffar</h2>
             <div className="cards-meetup">
                 <div className="card">
                     <a href="#" onClick={toggleKennel1}>
