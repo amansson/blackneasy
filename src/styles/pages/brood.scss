@@ -1,0 +1,147 @@
+.brood-bg {
+    border-top: 4px solid $color-gray-light;
+    margin: 40px 0 0 0;
+
+    h2 {
+        margin: 50px 0 0 0;
+    }
+
+    .date {
+        padding: 10px 0 20px 0;
+        font-family: "Raleway", sans-serif;        
+    }
+}
+
+.cards-brood {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
+
+    .card {
+        overflow: hidden;
+        height: 120px;
+        background: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+
+        img {
+            height: 100%;
+            width: 50%;
+            object-fit: cover;
+        }
+
+        &:hover {
+            filter: brightness(100%);
+            @extend .zoom-background-hover;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        .body {
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+
+            h2 {
+                font-size: 16px;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            p {
+                font-size: 12px;
+                line-height: 1.4;
+                opacity: 0.7;
+                margin-bottom: 0;
+                margin-top: 8px;
+            }
+        }
+    }
+}
+
+.cards-test {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 40px;
+
+    .card {
+        position: relative;
+        width: 100%;
+        border-radius: 12px;
+        box-shadow: 0 0 30px $box-shadow;
+
+        img {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .info {
+            z-index: 2;
+            background-color: #fff;
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            padding: 16px 24px 24px 24px;
+
+            .gender {
+                font-family: "Raleway", sans-serif;
+                text-transform: uppercase;
+                font-size: 13px;
+                letter-spacing: 2px;
+                font-weight: 500;
+                color: $color-gray-medium;
+            }
+
+            h3 {
+                margin-top: 5px;
+                margin-bottom: 10px;
+                font-family: "Roboto Slab", serif;
+            }
+
+            .location {
+                font-size: 14px;
+                font-family: "Raleway", sans-serif;
+            }
+        }
+    }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+    .cards-brood {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .cards-brood {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .cards-brood {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .cards-brood {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .cards-brood {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

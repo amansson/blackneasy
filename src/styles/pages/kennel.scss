@@ -1,0 +1,56 @@
+.cards-kennel {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 50px;
+
+    .card {
+        width: 100%;
+
+        &:hover {
+            filter: brightness(100%);
+            @extend .zoom-background-hover;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        a {
+            text-decoration: none;
+            color: $color-white;
+        }
+
+        img {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            box-shadow: 0 0 30px $box-shadow;
+            width: 100%;
+        }
+
+        .caption {
+            background-color: black;
+            opacity: 0.8;
+            padding: 10px;
+            text-align: center;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    }
+}
+
+.cards-meetup {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 50px;
+
+    .image-meetup img {
+        border-radius: 5px;
+        box-shadow: 0 0 30px $box-shadow;
+        width: 100%;
+
+        &:hover {
+            filter: brightness(100%);
+            @extend .zoom-background-hover;
+            cursor: pointer;
+            object-fit: cover;
+        }
+    }
+}
