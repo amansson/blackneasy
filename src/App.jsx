@@ -10,6 +10,7 @@ import Puppies from './pages/Puppies';
 import Gallery from './pages/Gallery';
 import Brood from './pages/Brood';
 import Kennel from './pages/Kennel';
+import About from './pages/About';
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
                     <Route path="/certificate" component={Certificate} exact />
                     <Route path="/puppies" component={Puppies} exact />
                     <Route path="/brood" component={Brood} exact />
+                    <Route path="/about" component={About} exact />
                     <Route path="/gallery" component={Gallery} exact />
                     <Route path="/kennel" component={Kennel} exact />
                 </Switch>
