@@ -9,7 +9,7 @@ import Certificate from './pages/Certificate';
 import Puppies from './pages/Puppies';
 import Gallery from './pages/Gallery';
 import Brood from './pages/Brood';
-import Kennel from './pages/Kennel';
+import Meetup from './pages/Meetup';
 import About from './pages/About';
 
 
@@ -26,7 +26,7 @@ const App = () => {
                     <Route path="/brood" component={Brood} exact />
                     <Route path="/about" component={About} exact />
                     <Route path="/gallery" component={Gallery} exact />
-                    <Route path="/kennel" component={Kennel} exact />
+                    <Route path="/meetup" component={Meetup} exact />
                 </Switch>
             </div>
             <Footer />
