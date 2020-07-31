@@ -61,7 +61,7 @@ const Meetup = () => {
                     <MeetupContent meetup={"meetup2"} />
                     : ""}
                 {showKennel3 ?
-                    <MeetupContent meetup={"meetup1"} />
+                    <MeetupContent meetup={"meetup3"} />
                     : ""}
             </div>
         </div>
