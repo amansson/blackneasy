@@ -1,59 +1,71 @@
-import React, { useState, useEffect } from 'react';
-import Meetup from '../components/Meetup';
+import React, { useState, Fragment } from 'react';
+import MeetupContent from '../components/MeetupContent';
 
-const Kennel = () => {
+const Meetup = () => {
     const [showKennel1, setKennel1] = useState(true);
-    const [showKennel2, setKennel2] = useState(true);
-    const [showKennel3, setKennel3] = useState(true);
-
-    useEffect(() => {
-        
-      });
+    const [showKennel2, setKennel2] = useState(false);
+    const [showKennel3, setKennel3] = useState(false);
 
     const toggleKennel1 = () => {
-        setKennel2(false);
-        setKennel3(false);
+        toggleAll();
+        setKennel1(!showKennel1);
     }
-    
+
     const toggleKennel2 = () => {
-        setKennel1(false);
-        setKennel3(false);
+        toggleAll();
+        setKennel2(!showKennel2);
     }
-    
+
     const toggleKennel3 = () => {
+        toggleAll();
+        setKennel3(!showKennel3);
+    }
+
+    const toggleAll = () => {
         setKennel1(false);
         setKennel2(false);
+        setKennel3(false);
     }
 
-    const toggleAll = () => {        
-        setKennel1(true);
-        setKennel2(true);
-        setKennel3(true);
-    }
-
-    console.log(showKennel1);
-    console.log(showKennel2);
-    console.log(showKennel3);
-    
     return (
-        <div className="wrapper cards-kennel">
-            { showKennel1 ? 
-                <div onClick={toggleKennel1} >
-                    <Meetup meetup={"kennel2"} image={"https://res.cloudinary.com/blackneasy/image/upload/v1595575455/kennel/1/184_xvaqe8.jpg"} caption={"Kennel Träff 1"} toggleAll={toggleAll}/>
+        <div className="wrapper">
+            <h2 className="meetup-caption">Klicka  nedan för olika kennel träffar</h2>
+            <div className="cards-meetup">
+                <div className="card">
+                    <a href="#" onClick={toggleKennel1}>
+                        <img src="https://res.cloudinary.com/blackneasy/image/upload/v1595575455/meetup/1/184_xvaqe8.jpg" alt="Kennel Träff 1" />
+                        <p className="caption">Kennel Träff 1</p>
+                    </a>
                 </div>
-            : ""}
-            { showKennel2 ? 
-                <div onClick={toggleKennel2} >
-                    <Meetup meetup={"kennel2"} image={"https://res.cloudinary.com/blackneasy/image/upload/v1595575455/kennel/1/184_xvaqe8.jpg"} caption={"Kennel Träff 2"} toggleAll={toggleAll}/>
+                <div className="card">
+                    <a href="#" onClick={toggleKennel2}>
+                        <img src="https://res.cloudinary.com/blackneasy/image/upload/v1595575455/meetup/1/184_xvaqe8.jpg" alt="Kennel Träff 2" />
+                        <p className="caption">Kennel Träff 2</p>
+                    </a>
                 </div>
-            : ""}
-            { showKennel3 ? 
-                <div onClick={toggleKennel3} >
-                    <Meetup meetup={"kennel2"} image={"https://res.cloudinary.com/blackneasy/image/upload/v1595575455/kennel/1/184_xvaqe8.jpg"} caption={"Kennel Träff 3"} toggleAll={toggleAll}/>
+                <div className="card">
+                    <a href="#" onClick={toggleKennel3}>
+                        <img src="https://res.cloudinary.com/blackneasy/image/upload/v1595575455/meetup/1/184_xvaqe8.jpg" alt="Kennel Träff 3" />
+                        <p className="caption">Kennel Träff 3</p>
+                    </a>
                 </div>
-            : ""}
+            </div>
+
+            <div className="meetup-line"></div>
+
+            <div className="cards-meetup-content">
+                {showKennel1 ?
+                    <MeetupContent meetup={"meetup1"} />
+                    : ""}
+                {showKennel2 ?
+                    <MeetupContent meetup={"meetup2"} />
+                    : ""}
+                {showKennel3 ?
+                    <MeetupContent meetup={"meetup1"} />
+                    : ""}
+            </div>
         </div>
     )
 }
 
-export default Kennel;
+export default Meetup;

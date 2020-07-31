@@ -1,4 +1,10 @@
-.cards-kennel {
+.meetup-caption {
+    text-align: center;
+    color: $color-gray-medium;
+    padding-bottom: 20px;
+}
+
+.cards-meetup {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
@@ -36,21 +42,29 @@
     }
 }
 
-.cards-meetup {
+.meetup-line {
+    border-top: 4px solid $color-gray-light;
+    margin: 40px 0;
+}
+
+.cards-meetup-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 50px;
 
-    .image-meetup img {
-        border-radius: 5px;
-        box-shadow: 0 0 30px $box-shadow;
-        width: 100%;
-
-        &:hover {
-            filter: brightness(100%);
-            @extend .zoom-background-hover;
-            cursor: pointer;
-            object-fit: cover;
+    .card {
+        
+        img {
+            border-radius: 5px;
+            box-shadow: 0 0 30px $box-shadow;
+            width: 100%;
+    
+            &:hover {
+                filter: brightness(100%);
+                @extend .zoom-background-hover;
+                cursor: pointer;
+                object-fit: cover;
+            }
         }
     }
 }
