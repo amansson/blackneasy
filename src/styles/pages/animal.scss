@@ -1,0 +1,28 @@
+.card-profile {
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 15px $box-shadow;
+
+    .body {
+        padding: 20px;
+    }
+
+    img {
+        height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    h2 {
+        font-size: 1.6em;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    p {
+        font-size: 1em;
+        opacity: 0.7;
+        margin: 0;
+        text-transform: uppercase;
+    }
+}
