@@ -1,0 +1,109 @@
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .bg {
+        background-color: $color-bg-text;
+        padding: 30px 20px;
+    }
+
+    h2, h3, h4 {
+        font-family: 'Poppins', sans-serif;
+        margin: 20px;
+        text-align: center;
+        color: $color-gray-dark;
+    }
+
+    h3 {
+        text-transform: uppercase;
+    }
+
+    h4 {
+        font-weight: normal;
+        padding: 20px 0 10px 0;
+    }
+
+    p {
+        font-family: 'Poppins', sans-serif;
+        color: $color-gray-medium;
+        font-size: 16px;
+        line-height: 2em;
+        margin: 20px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .diplom {
+        border-left: 5px solid $color-nav-link-hover;
+        margin: 10px 30px;
+
+        p {
+            margin: 0 10px;
+        }
+    }
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-certificate {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards-puppies {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-brood {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .about {
+        grid-template-columns: 1fr;
+
+        img {
+            padding-top: 20px;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .about {
+        grid-template-columns: 1fr;
+
+        img {
+            padding-top: 20px;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .about {
+        grid-template-columns: 1fr 1fr;
+
+        img {
+            padding-top: 0;
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .about {
+        grid-template-columns: 1fr 1fr;
+
+        img {
+            padding-top: 0;
+        }
+    }
+}
