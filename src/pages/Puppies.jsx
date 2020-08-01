@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Puppy from '../components/Puppy';
 import FetchData from '../components/FetchData';
-import { FaHeart } from 'react-icons/fa';
+import PuppiesSelect from '../components/PuppiesSelect';
 
 const Puppies = () => {
 
@@ -15,57 +15,13 @@ const Puppies = () => {
             <div className="wrapper">
                 <h2 className="notice-action">Klicka på Mamma - Pappa för att se deras valparna</h2>
                 <div className="card-puppies">
-                    <div className="puppies-select">
-                        <div class="select">
-                            <img src="https://res.cloudinary.com/blackneasy/image/upload/v1596117516/Easy.jpg" />
-                            <div class="select-infos">
-                                <h2>Easy</h2>
-                                <p>Mamma</p>
-                            </div>
-                        </div>
-                        <div className="bg">
-                            <div class="avatar-bordered">
-                                <div className="heart"><FaHeart /></div>
-                            </div>
-                        </div>
-                        <div class="select">
-                            <img src="https://res.cloudinary.com/blackneasy/image/upload/v1593848797/Jixie.jpg" alt="" />
-                            <div class="select-infos">
-                                <h2>Jixie</h2>
-                                <p>Pappa</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="puppies-select">
-                        <div class="select">
-                            <img src="https://res.cloudinary.com/blackneasy/image/upload/v1596117516/Easy.jpg" />
-                            <div class="select-infos">
-                                <h2>Easy</h2>
-                                <p>Mamma</p>
-                            </div>
-                        </div>
-                        <div className="bg">
-                            <div class="avatar-bordered">
-                                <div className="heart"><FaHeart /></div>
-                            </div>
-                        </div>
-                        <div class="select">
-                            <img src="https://res.cloudinary.com/blackneasy/image/upload/v1593848797/Jixie.jpg" alt="" />
-                            <div class="select-infos">
-                                <h2>Jixie</h2>
-                                <p>Pappa</p>
-                            </div>
-                        </div>
-                    </div>
-
+                   <PuppiesSelect imageMother={"Easy"} imageFather={"Jixie"} nameMother={"Easy"} nameFather={"Jixie"} /> 
+                   <PuppiesSelect imageMother={"Easy"} imageFather={"Jixie"} nameMother={"Easy"} nameFather={"Jixie"} /> 
+                   <PuppiesSelect imageMother={"Easy"} imageFather={"Jixie"} nameMother={"Easy"} nameFather={"Jixie"} /> 
+                   <PuppiesSelect imageMother={"Easy"} imageFather={"Jixie"} nameMother={"Easy"} nameFather={"Jixie"} /> 
                 </div>
-
             </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            
             <div className="wrapper puppies-images">
                 {
                     imageData.response.resources.map(image => {
