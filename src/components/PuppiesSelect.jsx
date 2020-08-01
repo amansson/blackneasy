@@ -4,16 +4,12 @@ import { FaHeart } from 'react-icons/fa';
 
 const PuppiesSelect = (props) => {
     return (
-        <div className="puppies-select">
+        <div className="puppies-select" onClick={props.toggle}>
             <div class="select">
                 <Image cloudName="blackneasy" publicId={props.imageMother}>
                     <Transformation
-                        crop="fill"
+                        crop="scale"
                         gravity="faces"
-                        width="300"
-                        height="200"
-                        dpr="auto"
-                        responsive_placeholder="blank"
                     />
                 </Image>
                 <div class="select-infos">
@@ -29,12 +25,8 @@ const PuppiesSelect = (props) => {
             <div class="select">
                 <Image cloudName="blackneasy" publicId={props.imageFather}>
                     <Transformation
-                        crop="fill"
+                        crop="scale"
                         gravity="faces"
-                        width="300"
-                        height="200"
-                        dpr="auto"
-                        responsive_placeholder="blank"
                     />
                 </Image>
                 <div class="select-infos">
