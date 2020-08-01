@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react';
-import { Image } from 'cloudinary-react';
 import BroodContent from '../components/BroodContent';
+import BroodSelect from '../components/BroodSelect';
 
 const Brood = () => {
     const [showMother1, setShowMother1] = useState(true);
@@ -40,73 +40,42 @@ const Brood = () => {
             <div className="wrapper">
                 <h2 className="notice-action">Klicka på tikarna för att se deras valparna</h2>
                 <div className="cards-brood">
-                    <div className="card" onClick={toggleMother1}>
-                        <Image cloudName="blackneasy" publicId="easy" alt="Easy" />
-                        <div className="body">
-                            <h2>Easy</h2>
-                            <p>Groenendael</p>
-                        </div>
-                    </div>
-
-                    <div className="card" onClick={toggleMother2}>
-                        <Image cloudName="blackneasy" publicId="jixie" alt="Jixie" />
-                        <div className="body">
-                            <h2>Jixie</h2>
-                            <p>Tervueren</p>
-                        </div>
-                    </div>
-
-                    <div className="card" onClick={toggleMother3}>
-                        <Image cloudName="blackneasy" publicId="jixie" alt="Jixie" />
-                        <div className="body">
-                            <h2>Jixie</h2>
-                            <p>Tervueren</p>
-                        </div>
-                    </div>
-
-                    <div className="card" onClick={toggleMother4}>
-                        <Image cloudName="blackneasy" publicId="Tiffy" alt="Jixie" />
-                        <div className="body">
-                            <h2>Tiffy</h2>
-                            <p>Tervueren</p>
-                        </div>
-                    </div>
+                    <BroodSelect toggle={toggleMother1} name={"Easy"} image={"Easy_profile"} race={"Groenendael"} />
+                    <BroodSelect toggle={toggleMother2} name={"Vimsa"} image={"Vimsa_profile"} race={"Groenendael"} />
+                    <BroodSelect toggle={toggleMother3} name={"Jixie"} image={"Jixie_profile"} race={"Tervuerens"} />
+                    <BroodSelect toggle={toggleMother4} name={"Shantis"} image={"Shantis_profile"} race={"Groenendael"} />
                 </div>
             </div>
 
             {showMother1 ?
                 <div className="brood-bg">
                     <div className="wrapper">
-                        <BroodContent brood={"Easy och Kastor"} date={"20 November 2015 "} images={"easy3"} />
-                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014 "} images={"easy2"} />
-                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014 "} images={"easy1"} />
+                        <BroodContent brood={"Easy och Kastor"} date={"20 November 2015 "} images={"easy1"} />
                     </div>
                 </div>
                 : ""}
             {showMother2 ?
                 <div className="brood-bg">
                     <div className="wrapper">
-                        <h2 className="text-align-center">Jixie</h2>
-                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014 "} images={"easy2"} />
-
+                        <BroodContent brood={"Vimsa och Kazan"} date={"07 December 2018"} images={"brood_vimsa_3"} />
+                        <BroodContent brood={"Vimsa och Zkrutt"} date={"13 Juni 2017"} images={"brood_vimsa_2"} />
+                        <BroodContent brood={"Vimsa och Zkrutt"} date={"09 Oktober 2016"} images={"brood_vimsa_1"} />
                     </div>
                 </div>
                 : ""}
             {showMother3 ?
                 <div className="brood-bg">
                     <div className="wrapper">
-                        <h2 className="text-align-center">Jixie</h2>
-                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014 "} images={"easy3"} />
-                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014 "} images={"easy1"} />
+                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014"} images={"easy3"} />
+                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014"} images={"easy1"} />
                     </div>
                 </div>
                 : ""}
             {showMother4 ?
                 <div className="brood-bg">
-                    <div className="wrapper">
-                        <h2 className="text-align-center">Tiffy</h2>                        
-                        <BroodContent brood={"Easy och Kastor"} date={"20 November 2015 "} images={"easy3"} />
-                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014 "} images={"easy2"} />
+                    <div className="wrapper">                                         
+                        <BroodContent brood={"Easy och Kastor"} date={"20 November 2015"} images={"easy3"} />
+                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014"} images={"easy2"} />
                     </div>
                 </div>
                 : ""}
