@@ -1,4 +1,74 @@
-.cards-puppies {
+.card-puppies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5%;
+}
+
+.puppies-select {
+    display: grid;
+    grid-template-columns: 49.5% 1% 49.5%;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    cursor: pointer;
+    
+    .select {
+        background: white;
+        
+        .select-infos {
+            padding: 10px;
+            
+            h2 {
+                font-size: 1.4em;
+                font-weight: 600;
+                text-align: center;
+                letter-spacing: 2px;
+            }
+            p {
+                font-size: 0.8em;
+                font-weight: 600;
+                opacity: 0.7;
+                margin-top: 5px;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+        
+        img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+    }
+    
+    .bg {
+        position: relative;
+        background-color: white;
+        height: 100%;
+        width: 100%;
+    }
+
+    .avatar-bordered {
+        position: absolute;
+        left: -25px;
+        bottom: 15%;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+        border: white 5px solid;
+        background-color: white;
+
+        .heart {
+            font-size: 2.6em;
+            margin-top: 5px;
+            text-align: center;
+            color: $color-red-dark;
+        }
+    }
+}
+
+.puppies-images {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 50px;
@@ -20,35 +90,35 @@
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-    .cards-puppies {
+    .puppies-images {
         grid-template-columns: 1fr;
     }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    .cards-puppies {
+    .puppies-images {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    .cards-puppies {
+    .puppies-images {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    .cards-puppies {
+    .puppies-images {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    .cards-puppies {
+    .puppies-images {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
