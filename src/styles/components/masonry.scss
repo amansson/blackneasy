@@ -1,7 +1,14 @@
 .masonry {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 20px;
+    
+    .masonry-template-4 {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .masonry-template-3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
     
     .column {
         .child {
@@ -27,35 +34,55 @@
 
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
-    .masonry {
+    .masonry-template-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .masonry-template-3 {
         grid-template-columns: 1fr;
     }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    .masonry {
+    .masonry-template-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .masonry-template-3 {
         grid-template-columns: 1fr;
     }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    .masonry {
+    .masonry-template-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .masonry-template-3 {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    .masonry {
+    .masonry-template-4 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .masonry-template-3 {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    .masonry {
+    .masonry-template-4 {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    .masonry-template-3 {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
