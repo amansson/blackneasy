@@ -29,7 +29,7 @@ const Masonry = (props) => {
     };
 
     return (
-        <div className="masonry">
+        <div className={`masonry masonry-template-${props.columns}`}>
             {result}
         </div>
     )
