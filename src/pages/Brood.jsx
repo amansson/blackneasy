@@ -40,16 +40,18 @@ const Brood = () => {
             <div className="wrapper">
                 <h2 className="notice-action">Klicka på tikarna för att se deras valparna</h2>
                 <div className="cards-brood">
-                    <BroodSelect toggle={toggleMother1} name={"Easy"} image={"Easy_profile"} race={"Groenendael"} />
-                    <BroodSelect toggle={toggleMother2} name={"Vimsa"} image={"Vimsa_profile"} race={"Groenendael"} />
-                    <BroodSelect toggle={toggleMother3} name={"Jixie"} image={"Jixie_profile"} race={"Tervuerens"} />
-                    <BroodSelect toggle={toggleMother4} name={"Shantis"} image={"Shantis_profile"} race={"Groenendael"} />
+                    <BroodSelect toggle={toggleMother1} name={"Easy"} image={"profile/Easy_profile"} race={"Groenendael"} />
+                    <BroodSelect toggle={toggleMother2} name={"Vimsa"} image={"profile/Vimsa_profile"} race={"Groenendael"} />
+                    <BroodSelect toggle={toggleMother3} name={"Jixie"} image={"profile/Jixie_profile"} race={"Tervuerens"} />
+                    <BroodSelect toggle={toggleMother4} name={"Shantis"} image={"profile/Shantis_profile"} race={"Groenendael"} />
                 </div>
             </div>
 
             {showMother1 ?
                 <div className="brood-bg">
                     <div className="wrapper">
+                        <BroodContent brood={"Easy och Kastor"} date={"20 November 2015 "} images={"easy3"} />
+                        <BroodContent brood={"Easy och Kastor"} date={"20 November 2015 "} images={"easy2"} />
                         <BroodContent brood={"Easy och Kastor"} date={"20 November 2015 "} images={"easy1"} />
                     </div>
                 </div>
