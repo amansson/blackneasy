@@ -1,28 +1,47 @@
-.card-profile {
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 0 15px $box-shadow;
+.cards-animal {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
 
-    .body {
-        padding: 20px;
-    }
-
-    img {
-        height: 200px;
+    .card {
+        position: relative;
         width: 100%;
-        object-fit: cover;
-    }
+        box-shadow: 0 0 15px $box-shadow;
 
-    h2 {
-        font-size: 1.6em;
-        font-weight: bold;
-        margin: 0;
-    }
+        &:hover {
+            filter: brightness(100%);
+            @extend .zoom-background-hover;
+            cursor: pointer;
+        }
 
-    p {
-        font-size: 1em;
-        opacity: 0.7;
-        margin: 0;
-        text-transform: uppercase;
+        img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .body {
+            padding: 20px;
+
+            h2 {
+                display: inline;
+                font-size: 1.6em;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+
+            .other {
+                color: $color-gray-medium;
+            }
+
+            p {
+                padding-top: 5px;
+                font-size: 0.9em;
+                opacity: 0.7;
+                margin: 0;
+                text-transform: uppercase;
+            }
+        }
     }
 }
