@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import BreedJixie from '../components/BreedJixie';
+import Breed from '../components/Breed';
 
 const Landing = () => {
     return (
@@ -7,13 +7,12 @@ const Landing = () => {
             <div className="banner">
                 <div className="container">
                     <h1>Black n easy <strong>Valpar i alla dess former</strong></h1>
-                    <p>Tervuerens, Groendahl</p>                    
+                    <p>Tervuerens, Groendahl</p>
                 </div>
             </div>
 
             <div className="wrapper">
-                <h1>Parning</h1>
-                <BreedJixie />
+                <Breed header={"Parades 21 Juni 2020"} images={"jixie_proffen"} imageMother={"profile/jixie_profile"} imageFather={"profile/proffen_profile"} nameMother={"Jixie"} nameFather={"Proffen"} />
             </div>
         </Fragment>
     )
