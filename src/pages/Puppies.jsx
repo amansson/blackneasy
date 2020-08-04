@@ -40,10 +40,10 @@ const Puppies = () => {
             <div className="wrapper">
                 <h2 className="notice-action">Klicka på Mamma - Pappa för att se deras valparna</h2>
                 <div className="card-puppies">
-                    <PuppiesSelect toggle={toggleMother1} imageMother={"Easy_profile"} imageFather={"Kastor_profile"} nameMother={"Easy"} nameFather={"Kastor"} />
-                    <PuppiesSelect toggle={toggleMother2} imageMother={"Vimsa_profile"} imageFather={"Zkrutt_profile"} nameMother={"Vimsa"} nameFather={"Zkrutt"} />
-                    <PuppiesSelect toggle={toggleMother3} imageMother={"Shantis_profile"} imageFather={"Zkrutt_profile"} nameMother={"Shantis"} nameFather={"Zkrutt"} />
-                    <PuppiesSelect toggle={toggleMother4} imageMother={"Vimsa_profile"} imageFather={"Kazan_profile"} nameMother={"Vimsa"} nameFather={"Kazan"} />
+                    <PuppiesSelect toggle={toggleMother1} imageMother={"profile/Easy_profile"} imageFather={"profile/Kastor_profile"} nameMother={"Easy"} nameFather={"Kastor"} />
+                    <PuppiesSelect toggle={toggleMother2} imageMother={"profile/Vimsa_profile"} imageFather={"profile/Zkrutt_profile"} nameMother={"Vimsa"} nameFather={"Zkrutt"} />
+                    <PuppiesSelect toggle={toggleMother3} imageMother={"/profile/Shantis_profile"} imageFather={"profile/Zkrutt_profile"} nameMother={"Shantis"} nameFather={"Zkrutt"} />
+                    <PuppiesSelect toggle={toggleMother4} imageMother={"profile/Vimsa_profile"} imageFather={"profile/Kazan_profile"} nameMother={"Vimsa"} nameFather={"Kazan"} />
                 </div>
             </div>
 

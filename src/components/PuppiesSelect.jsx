@@ -6,12 +6,18 @@ const PuppiesSelect = (props) => {
     return (
         <div className="puppies-select" onClick={props.toggle}>
             <div class="select">
-                <Image cloudName="blackneasy" publicId={props.imageMother}>
+                <Image cloudName="blackneasy" publicId={props.imageMother} >
                     <Transformation
-                        crop="scale"
-                        gravity="faces"
-                    />
-                </Image>
+                            crop="fill"
+                            gravity="faces"
+                            width="300"
+                            height="200"
+                            dpr="auto"
+                            responsive_placeholder="blank"
+                        />
+                        </Image>
+
+                
                 <div class="select-infos">
                     <h2>{props.nameMother}</h2>
                     <p>Mamma</p>
