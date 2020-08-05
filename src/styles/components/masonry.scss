@@ -11,10 +11,11 @@
     }
     
     .column {
+
         .child {
             box-shadow: 0 0 30px $box-shadow;
-            background-color: transparent;
             margin-bottom: 20px;
+            background-color: #efefef;
 
             img {
                 width: 100%;
