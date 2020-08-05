@@ -1,7 +1,7 @@
 .modalBackground {
     z-index: 1;
     transition: opacity 0.4s ease-in-out;
-    position: absolute;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
