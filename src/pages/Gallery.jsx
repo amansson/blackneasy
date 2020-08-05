@@ -4,7 +4,7 @@ import FetchData from '../components/FetchData';
 import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
 
 const Gallery = () => {
-    const imageData = FetchData('https://res.cloudinary.com/blackneasy/image/list/puppy.json', {});
+    const imageData = FetchData('https://res.cloudinary.com/blackneasy/image/list/gallery.json', {});
     if (!imageData.response) {
         return <div className="loading">Loading...</div>
     }
