@@ -39,7 +39,7 @@ const Brood = () => {
         <Fragment>
             <div className="wrapper">
                 <h2 className="notice-action">Klicka på tikarna för att se deras valparna</h2>
-                <div className="cards-brood">
+                <div className="select-brood">
                     <BroodSelect toggle={toggleMother1} name={"Easy"} image={"profile/Easy_profile"} race={"Groenendael"} />
                     <BroodSelect toggle={toggleMother2} name={"Vimsa"} image={"profile/Vimsa_profile"} race={"Groenendael"} />
                     <BroodSelect toggle={toggleMother3} name={"Jixie"} image={"profile/Jixie_profile"} race={"Tervuerens"} />

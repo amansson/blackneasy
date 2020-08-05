@@ -12,12 +12,12 @@
     }
 }
 
-.cards-brood {
+.select-brood {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 50px;
 
-    .card {
+    .select {
         overflow: hidden;
         height: 120px;
         background: white;
@@ -60,7 +60,7 @@
     }
 }
 
-.cards-test {
+.cards-brood {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 50px;

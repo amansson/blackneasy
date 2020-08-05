@@ -13,7 +13,7 @@ const BroodContent = (props) => {
         <Fragment>
             <h2 className="text-align-center">{props.brood}</h2>
             <div className="date text-align-center">{props.date}</div>
-            <div className="cards-test">
+            <div className="cards-brood">
 
                 {imageData.response.resources.map(image => {
                     return (
