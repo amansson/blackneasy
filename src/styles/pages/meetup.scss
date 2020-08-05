@@ -1,6 +1,5 @@
 .select-meetup {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
 
     .select {
@@ -43,7 +42,6 @@
 
 .cards-meetup {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 50px;
 
     .card {
@@ -60,5 +58,62 @@
                 object-fit: cover;
             }
         }
+    }
+}
+
+
+
+// Small devices (portrait phones, 576px and down)
+@media (max-width: 576px) {
+    .select-meetup {
+        grid-template-columns: 1fr;
+    }
+
+    .cards-meetup {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .select-meetup {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards-meetup {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .select-meetup {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cards-meetup {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .select-meetup {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cards-meetup {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .select-meetup {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .cards-meetup {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }

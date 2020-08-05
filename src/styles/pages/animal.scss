@@ -1,6 +1,5 @@
 .cards-animal {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;    
     row-gap: 30px;
     column-gap: 30px;
 
@@ -43,5 +42,40 @@
                 text-transform: uppercase;
             }
         }
+    }
+}
+
+// Small devices (portrait phones, 576px and down)
+@media (max-width: 576px) {
+    .cards-animal {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .cards-animal {
+        grid-template-columns: 1fr;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .cards-animal {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .cards-animal {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .cards-animal {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
