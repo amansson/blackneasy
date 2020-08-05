@@ -1,9 +1,9 @@
-.cards-meetup {
+.select-meetup {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 50px;
 
-    .card {
+    .select {
         width: 100%;
 
         &:hover {
@@ -41,7 +41,7 @@
     margin: 40px 0;
 }
 
-.cards-meetup-content {
+.cards-meetup {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 50px;
