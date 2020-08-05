@@ -7,6 +7,7 @@ const Puppies = () => {
     const [showMother2, setShowMother2] = useState(false);
     const [showMother3, setShowMother3] = useState(false);
     const [showMother4, setShowMother4] = useState(false);
+    const [showMother5, setShowMother5] = useState(false);
 
     const toggleMother1 = () => {
         toggleAll();
@@ -27,12 +28,17 @@ const Puppies = () => {
         toggleAll();
         setShowMother4(!showMother4);
     }
+    const toggleMother5 = () => {
+        toggleAll();
+        setShowMother5(!showMother5);
+    }
 
     const toggleAll = () => {
         setShowMother1(false);
         setShowMother2(false);
         setShowMother3(false);
         setShowMother4(false);
+        setShowMother5(false);
     }
 
     return (
@@ -44,6 +50,7 @@ const Puppies = () => {
                     <PuppiesSelect toggle={toggleMother2} imageMother={"profile/Vimsa_profile"} imageFather={"profile/Zkrutt_profile"} nameMother={"Vimsa"} nameFather={"Zkrutt"} />
                     <PuppiesSelect toggle={toggleMother3} imageMother={"/profile/Shantis_profile"} imageFather={"profile/Zkrutt_profile"} nameMother={"Shantis"} nameFather={"Zkrutt"} />
                     <PuppiesSelect toggle={toggleMother4} imageMother={"profile/Vimsa_profile"} imageFather={"profile/Kazan_profile"} nameMother={"Vimsa"} nameFather={"Kazan"} />
+                    <PuppiesSelect toggle={toggleMother5} imageMother={"profile/Tiffy_profile"} imageFather={"profile/"} nameMother={"Tiffy"} nameFather={"Hane"} />
                 </div>
             </div>
 
@@ -64,14 +71,21 @@ const Puppies = () => {
             {showMother3 ?
                 <div className="brood-bg">
                     <div className="wrapper puppies-images">
-                        <PuppiesContent  puppies={"puppies_shantis_zkrutt"} />
+                        <PuppiesContent puppies={"puppies_shantis_zkrutt"} />
                     </div>
                 </div>
                 : ""}
             {showMother4 ?
                 <div className="brood-bg">
                     <div className="wrapper puppies-images">
-                        <PuppiesContent  puppies={"puppies_vimsa_kazan"} />
+                        <PuppiesContent puppies={"puppies_vimsa_kazan"} />
+                    </div>
+                </div>
+                : ""}
+            {showMother5 ?
+                <div className="brood-bg">
+                    <div className="wrapper puppies-images">
+                        <PuppiesContent puppies={"puppies_tiffy"} />
                     </div>
                 </div>
                 : ""}
