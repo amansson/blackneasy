@@ -1,78 +1,64 @@
 .card-puppies {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 3%;
-    row-gap: 6%;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 40px;
+    row-gap: 30px;
 }
 
 .puppies-select {
     display: grid;
-    grid-template-columns: 49.5% 1% 49.5%;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    grid-template-columns: 3fr 2fr 3fr;
+    box-shadow: 0 0 15px $box-shadow;
     cursor: pointer;
 
-    .select {
-        background: white;
+    &:hover {
+        filter: brightness(100%);
+        @extend .zoom-background-hover;
+        cursor: pointer;
+        object-fit: cover;
+    }
 
-        .select-infos {
-            padding: 10px;
+    .infos {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 5px;
+        color: $color-gray-dark;
 
-            h2 {
-                font-size: 1.4em;
-                font-weight: 600;
-                text-align: center;
-                letter-spacing: 2px;
-            }
-            p {
-                font-size: 0.8em;
-                font-weight: 600;
-                opacity: 0.7;
-                margin-top: 5px;
-                text-align: center;
-                text-transform: uppercase;
-            }
+        .item-left {            
+            text-align: left;
+            margin-bottom: 20px;
         }
 
-        img {
-            height: 200px;
-            width: 100%;
-            object-fit: cover;
+        .item-right {    
+            text-align: right;
+        }
+
+        h2 {
+            font-size: 1.2em;
+            font-weight: 600;
+            letter-spacing: 3px;
+        }
+        p {
+            font-size: 0.7em;
+            letter-spacing: 1px;
+            opacity: 0.7;
+            text-transform: uppercase;
         }
     }
 
-    .bg {
-        position: relative;
-        background-color: white;
+    img {
         height: 100%;
         width: 100%;
-    }
-
-    .avatar-bordered {
-        position: absolute;
-        left: -25px;
-        bottom: 15%;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-        border: white 5px solid;
-        background-color: white;
-
-        .heart {
-            font-size: 2.6em;
-            margin-top: 5px;
-            text-align: center;
-            color: $color-red-dark;
-        }
+        object-fit: cover;
     }
 }
 
 .puppies-images {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 50px;
-    margin-bottom: 50px;
+    column-gap: 50px;
+    row-gap: 40px;    
 
     img {
         border-radius: 5px;
@@ -131,7 +117,7 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
     .card-puppies {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
     .puppies-images {
         grid-template-columns: 1fr 1fr 1fr 1fr;
