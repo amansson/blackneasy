@@ -14,7 +14,6 @@
 
 .select-brood {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 50px;
 
     .select {
@@ -62,7 +61,6 @@
 
 .cards-brood {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 50px;
     row-gap: 40px;
 
@@ -111,8 +109,12 @@
     }
 }
 
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
+// Small devices (portrait phones, 576px and down)
+@media (max-width: 576px) {
+    .select-brood {
+        grid-template-columns: 1fr;
+    }
+
     .cards-brood {
         grid-template-columns: 1fr;
     }
@@ -120,6 +122,10 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+    .select-brood {
+        grid-template-columns: 1fr 1fr;
+    }
+
     .cards-brood {
         grid-template-columns: 1fr 1fr;
     }
@@ -127,20 +133,32 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+    .select-brood {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .cards-brood {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+    .select-brood {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
     .cards-brood {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+    .select-brood {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
     .cards-brood {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
