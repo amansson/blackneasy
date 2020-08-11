@@ -33,19 +33,19 @@ const Meetup = () => {
             <div className="select-meetup">
                 <div className="select">
                     <a href="#" onClick={toggleKennel1}>
-                        <img src="https://res.cloudinary.com/blackneasy/image/upload/v1595575455/meetup/1/184_xvaqe8.jpg" alt="Kennel Träff 1" />
+                        <img src="https://res.cloudinary.com/blackneasy/image/upload/v1595575452/meetup/1/163_rsmxqx.jpg" alt="Kennel Träff 1" />
                         <p className="caption">Kennel Träff 1</p>
                     </a>
                 </div>
                 <div className="select">
                     <a href="#" onClick={toggleKennel2}>
-                        <img src="https://res.cloudinary.com/blackneasy/image/upload/v1595575455/meetup/1/184_xvaqe8.jpg" alt="Kennel Träff 2" />
+                        <img src="https://res.cloudinary.com/blackneasy/image/upload/v1596205582/meetup/2/396_g3dxsq.jpg" alt="Kennel Träff 2" />
                         <p className="caption">Kennel Träff 2</p>
                     </a>
                 </div>
                 <div className="select">
                     <a href="#" onClick={toggleKennel3}>
-                        <img src="https://res.cloudinary.com/blackneasy/image/upload/v1595575455/meetup/1/184_xvaqe8.jpg" alt="Kennel Träff 3" />
+                        <img src="https://res.cloudinary.com/blackneasy/image/upload/v1596205433/meetup/3/Kenneltra%CC%88ff-O%CC%88rkeljunga-15-sept.-2019-076_hgw8nc.jpg" alt="Kennel Träff 3" />
                         <p className="caption">Kennel Träff 3</p>
                     </a>
                 </div>
