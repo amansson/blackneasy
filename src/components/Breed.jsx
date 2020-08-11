@@ -66,6 +66,8 @@ const BreedJixie = (props) => {
                     })
                 }
             </Masonry>
+            <br/>
+            <br/>
 
 
         </Fragment>
