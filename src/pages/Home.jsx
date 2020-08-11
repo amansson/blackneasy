@@ -5,9 +5,8 @@ const Landing = () => {
     return (
         <Fragment>
             <div className="banner">
-                <div className="container">
-                    <h1>Black and Easy</h1>
-                    <p>Belgisk Vallhund / Tervuerens, Groendahl</p>
+                <div>
+                    <p>Belgisk Vallhund / Tervuerens, Groendahl, Russkaya Tsvetnaya Bolonka</p>
                 </div>
             </div>
 
