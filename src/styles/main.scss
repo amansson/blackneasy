@@ -31,3 +31,17 @@
     color: $color-gray-medium;
     padding-bottom: 20px;
 }
+
+.select-divider{
+    border-top: 4px solid $color-gray-light;
+    margin: 40px 0 0 0;
+
+    h2 {
+        margin: 30px 0 0 0;
+    }
+
+    .date {
+        padding: 10px 0 20px 0;
+        font-family: "Raleway", sans-serif;        
+    }
+}

@@ -52,43 +52,48 @@ const Puppies = () => {
                     <PuppiesSelect toggle={toggleMother4} imageMother={"profile/Vimsa_profile"} imageFather={"profile/Kazan_profile"} nameMother={"Vimsa"} nameFather={"Kazan"} />
                     <PuppiesSelect toggle={toggleMother5} imageMother={"profile/Tiffy_profile"} imageFather={"profile/"} nameMother={"Tiffy"} nameFather={"Hane"} />
                 </div>
-            </div>
 
-            {showMother1 ?
-                <div className="brood-bg">
-                    <div className="wrapper puppies-images">
-                        <PuppiesContent puppies={"puppies_easy_kastor_1"} />
+                {showMother1 ?
+                    <div className="select-divider">
+                        <h2 className="text-align-center">Easy och Kastor</h2>
+                        <div className="wrapper puppies-images">
+                            <PuppiesContent puppies={"puppies_easy_kastor_1"} />
+                        </div>
                     </div>
-                </div>
-                : ""}
-            {showMother2 ?
-                <div className="brood-bg">
-                    <div className="wrapper puppies-images">
-                        <PuppiesContent puppies={"puppies_vimsa_zkrutt"} />
+                    : ""}
+                {showMother2 ?
+                    <div className="select-divider">
+                        <h2 className="text-align-center">Vimsa och Zkrutt</h2>
+                        <div className="wrapper puppies-images">
+                            <PuppiesContent puppies={"puppies_vimsa_zkrutt"} />
+                        </div>
                     </div>
-                </div>
-                : ""}
-            {showMother3 ?
-                <div className="brood-bg">
-                    <div className="wrapper puppies-images">
-                        <PuppiesContent puppies={"puppies_shantis_zkrutt"} />
+                    : ""}
+                {showMother3 ?
+                    <div className="select-divider">
+                        <h2 className="text-align-center">Shantis och Zkrutt</h2>
+                        <div className="wrapper puppies-images">
+                            <PuppiesContent puppies={"puppies_shantis_zkrutt"} />
+                        </div>
                     </div>
-                </div>
-                : ""}
-            {showMother4 ?
-                <div className="brood-bg">
-                    <div className="wrapper puppies-images">
-                        <PuppiesContent puppies={"puppies_vimsa_kazan"} />
+                    : ""}
+                {showMother4 ?
+                    <div className="select-divider">
+                        <h2 className="text-align-center">Vimsa och Kazan</h2>
+                        <div className="wrapper puppies-images">
+                            <PuppiesContent puppies={"puppies_vimsa_kazan"} />
+                        </div>
                     </div>
-                </div>
-                : ""}
-            {showMother5 ?
-                <div className="brood-bg">
-                    <div className="wrapper puppies-images">
-                        <PuppiesContent puppies={"puppies_tiffy"} />
+                    : ""}
+                {showMother5 ?
+                    <div className="select-divider">
+                        <h2 className="text-align-center">Tiffy och Hane</h2>
+                        <div className="wrapper puppies-images">
+                            <PuppiesContent puppies={"puppies_tiffy"} />
+                        </div>
                     </div>
-                </div>
-                : ""}
+                    : ""}
+            </div>
         </Fragment>
     )
 }
