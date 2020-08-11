@@ -1,33 +1,24 @@
 import React, { Fragment, useState } from 'react';
-import { Image, Transformation } from 'cloudinary-react';
-import Modal from './Modal';
+import AnimalContentExtend from './AnimalContentExtend';
+import FetchData from './FetchData';
 
-const AnimalCard = (props) => {
-    const [showModal, setShowModal] = useState(false);
-
-    const toggleModal = () => {
-        setShowModal(!showModal);
+const AnimalContent = (props) => {
+    const imageData = FetchData(`https://res.cloudinary.com/blackneasy/image/list/${props.animal}.json`, {});
+    if (!imageData.response) {
+        return <div className="loading">Loading...</div>
     }
 
     return (
-        <Fragment>
-            <a onClick={toggleModal}>
-                <div className="card">
-                    <Image cloudName="blackneasy" publicId={props.image} alt="profile">
-                        <Transformation crop="scale" heigth="300" />
-                    </Image>
-                    <div className="body">
-                        <h2>{props.name}</h2><span className="other">{props.other ? `( ${props.other} )` : ""}</span>
-                        <p>{props.breed}</p>
-                    </div>
-                </div>
-            </a>
-            {showModal ?
-                <Modal showModal={toggleModal} image={<Image cloudName="blackneasy" publicId={props.image}></Image>} ></Modal>
-                : ""}
-
-        </Fragment>
+        <div className="cards-animal">
+            {
+                imageData.response.resources.map(image => {
+                    return (
+                        <AnimalContentExtend key={image.public_id} image={image.public_id} name={image.context.custom.caption} breed={image.context.custom.breed} other={image.context.custom.other} />
+                    )
+                })
+            }
+        </div>
     )
 }
 
-export default AnimalCard;
+export default AnimalContent;
