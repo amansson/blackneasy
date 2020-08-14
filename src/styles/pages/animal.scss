@@ -49,15 +49,8 @@
     }
 }
 
-// Small devices (portrait phones, 576px and down)
-@media (max-width: 576px) {
-    .cards-animal {
-        grid-template-columns: 1fr;
-    }
-}
-
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (min-width: 100px) {
     .cards-animal {
         grid-template-columns: 1fr;
     }
