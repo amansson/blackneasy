@@ -37,21 +37,10 @@
     }
 }
 
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
+// Small devices (landscape phones, 100px and up)
+@media (min-width: 100px) {
     .masonry-template-4 {
-        grid-template-columns: 1fr;
-    }
-
-    .masonry-template-3 {
-        grid-template-columns: 1fr;
-    }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-    .masonry-template-4 {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 
     .masonry-template-3 {

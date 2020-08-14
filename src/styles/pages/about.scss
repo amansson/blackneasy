@@ -45,27 +45,8 @@
     }
 }
 
-// Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
-
-    .cards-certificate {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .cards-puppies {
-        grid-template-columns: 1fr;
-    }
-
-    .cards-brood {
-        grid-template-columns: 1fr;
-    }
-}
-
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (min-width: 100px) {
     .about {
         grid-template-columns: 1fr;
 
