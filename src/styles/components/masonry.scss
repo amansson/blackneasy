@@ -12,6 +12,10 @@
     
     .column {
 
+        img {
+            width: 100%;
+        }
+
         .child {
             box-shadow: 0 0 30px $box-shadow;
             margin-bottom: 20px;
