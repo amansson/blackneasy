@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/blackneasy/static/css/main.c6ced01e.chunk.css",
+    "main.js": "/blackneasy/static/js/main.d682beb0.chunk.js",
+    "main.js.map": "/blackneasy/static/js/main.d682beb0.chunk.js.map",
+    "runtime-main.js": "/blackneasy/static/js/runtime-main.e1e0cb0b.js",
+    "runtime-main.js.map": "/blackneasy/static/js/runtime-main.e1e0cb0b.js.map",
+    "static/js/2.86a7b672.chunk.js": "/blackneasy/static/js/2.86a7b672.chunk.js",
+    "static/js/2.86a7b672.chunk.js.map": "/blackneasy/static/js/2.86a7b672.chunk.js.map",
+    "index.html": "/blackneasy/index.html",
+    "precache-manifest.4650b08483d6279d3bba3b862cf5b10e.js": "/blackneasy/precache-manifest.4650b08483d6279d3bba3b862cf5b10e.js",
+    "service-worker.js": "/blackneasy/service-worker.js",
+    "static/css/main.c6ced01e.chunk.css.map": "/blackneasy/static/css/main.c6ced01e.chunk.css.map",
+    "static/js/2.86a7b672.chunk.js.LICENSE.txt": "/blackneasy/static/js/2.86a7b672.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e1e0cb0b.js",
+    "static/js/2.86a7b672.chunk.js",
+    "static/css/main.c6ced01e.chunk.css",
+    "static/js/main.d682beb0.chunk.js"
+  ]
+}
