@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/blackneasy/static/css/main.a45a55b2.chunk.css",
+    "main.css": "/blackneasy/static/css/main.2a589ff7.chunk.css",
     "main.js": "/blackneasy/static/js/main.d682beb0.chunk.js",
     "main.js.map": "/blackneasy/static/js/main.d682beb0.chunk.js.map",
     "runtime-main.js": "/blackneasy/static/js/runtime-main.e1e0cb0b.js",
@@ -8,15 +8,15 @@
     "static/js/2.86a7b672.chunk.js": "/blackneasy/static/js/2.86a7b672.chunk.js",
     "static/js/2.86a7b672.chunk.js.map": "/blackneasy/static/js/2.86a7b672.chunk.js.map",
     "index.html": "/blackneasy/index.html",
-    "precache-manifest.df24c5b4bd5421bc9a374cb89a455fb8.js": "/blackneasy/precache-manifest.df24c5b4bd5421bc9a374cb89a455fb8.js",
+    "precache-manifest.a751cb61cfb632a9e53c20fedfec5b14.js": "/blackneasy/precache-manifest.a751cb61cfb632a9e53c20fedfec5b14.js",
     "service-worker.js": "/blackneasy/service-worker.js",
-    "static/css/main.a45a55b2.chunk.css.map": "/blackneasy/static/css/main.a45a55b2.chunk.css.map",
+    "static/css/main.2a589ff7.chunk.css.map": "/blackneasy/static/css/main.2a589ff7.chunk.css.map",
     "static/js/2.86a7b672.chunk.js.LICENSE.txt": "/blackneasy/static/js/2.86a7b672.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e1e0cb0b.js",
     "static/js/2.86a7b672.chunk.js",
-    "static/css/main.a45a55b2.chunk.css",
+    "static/css/main.2a589ff7.chunk.css",
     "static/js/main.d682beb0.chunk.js"
   ]
 }
