@@ -6,10 +6,10 @@
 
 .puppies-select {
     display: grid;
-    grid-template-columns: 3fr 2fr 3fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
     box-shadow: 0 0 15px $box-shadow;
     cursor: pointer;
-    height: 130px;
 
     &:hover {
         filter: brightness(100%);
@@ -18,27 +18,22 @@
         object-fit: cover;
     }
 
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+
     .infos {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
         padding: 10px 5px;
         color: $color-gray-dark;
-
-        .item-left {            
-            text-align: left;
-            margin-bottom: 20px;
-        }
-
-        .item-right {    
-            text-align: right;
-        }
+        text-align: center;
 
         h2 {
             font-size: 1.2em;
             font-weight: 600;
             letter-spacing: 3px;
         }
+
         p {
             font-size: 0.7em;
             letter-spacing: 1px;
@@ -47,11 +42,6 @@
         }
     }
 
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
 }
 
 .puppies-images {
