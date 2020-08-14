@@ -19,7 +19,14 @@
         transform: translate(-50%, -50%);
 
         img {
-            max-height: calc(100vh - 100px);   
+            max-height: calc(100vh - 100px);
+            
+            &:hover {
+                filter: brightness(100%);
+                transform: scale(1);
+                cursor: default;
+                object-fit: cover;
+            } 
         }
 
         h2 {
