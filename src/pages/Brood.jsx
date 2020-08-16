@@ -10,22 +10,22 @@ const Brood = () => {
 
     const toggleMother1 = () => {
         toggleAll();
-        setShowMother1(!showMother1);
+        setShowMother1(true);
     }
 
     const toggleMother2 = () => {
         toggleAll();
-        setShowMother2(!showMother2);
+        setShowMother2(true);
     }
 
     const toggleMother3 = () => {
         toggleAll();
-        setShowMother3(!showMother3);
+        setShowMother3(true);
     }
 
     const toggleMother4 = () => {
         toggleAll();
-        setShowMother4(!showMother4);
+        setShowMother4(true);
     }
 
     const toggleAll = () => {
