@@ -54,7 +54,7 @@ const Puppies = () => {
                 <div className="card-puppies">
                     <PuppiesSelect toggle={toggleMother1} imageMother={"profile/Easy_profile"} imageFather={"profile/Kastor_profile"} nameMother={"Easy"} nameFather={"Kastor"} />
                     <PuppiesSelect toggle={toggleMother2} imageMother={"profile/Vimsa_profile"} imageFather={"profile/Zkrutt_profile"} nameMother={"Vimsa"} nameFather={"Zkrutt"} />
-                    <PuppiesSelect toggle={toggleMother3} imageMother={"/profile/Shantis_profile"} imageFather={"profile/Zkrutt_profile"} nameMother={"Shantis"} nameFather={"Zkrutt"} />
+                    <PuppiesSelect toggle={toggleMother3} imageMother={"profile/Shantis_profile"} imageFather={"profile/Zkrutt_profile"} nameMother={"Shantis"} nameFather={"Zkrutt"} />
                     <PuppiesSelect toggle={toggleMother4} imageMother={"profile/Vimsa_profile"} imageFather={"profile/Kazan_profile"} nameMother={"Vimsa"} nameFather={"Kazan"} />
                     <PuppiesSelect toggle={toggleMother5} imageMother={"profile/Tiffy_profile"} imageFather={"profile/"} nameMother={"Tiffy"} nameFather={"Hane"} />
                     <PuppiesSelect toggle={toggleMother6} imageMother={"profile/Jixie_profile"} imageFather={"profile/Proffen_profile"} nameMother={"Jixie"} nameFather={"Proffen"} />
