@@ -13,34 +13,34 @@ const Puppies = () => {
 
     const toggleMother1 = () => {
         toggleAll();
-        setShowMother1(!showMother1);
+        setShowMother1(true);
     }
 
     const toggleMother2 = () => {
         toggleAll();
-        setShowMother2(!showMother2);
+        setShowMother2(true);
     }
 
     const toggleMother3 = () => {
         toggleAll();
-        setShowMother3(!showMother3);
+        setShowMother3(true);
     }
 
     const toggleMother4 = () => {
         toggleAll();
-        setShowMother4(!showMother4);
+        setShowMother4(true);
     }
     const toggleMother5 = () => {
         toggleAll();
-        setShowMother5(!showMother5);
+        setShowMother5(true);
     }
     const toggleMother6 = () => {
         toggleAll();
-        setShowMother6(!showMother6);
+        setShowMother6(true);
     }
     const toggleMother7 = () => {
         toggleAll();
-        setShowMother7(!showMother7);
+        setShowMother7(true);
     }
 
     const toggleAll = () => {
