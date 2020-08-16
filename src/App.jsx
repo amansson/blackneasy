@@ -19,14 +19,14 @@ const App = () => {
             <Navbar />
             <div id="main">
                 <Switch>
-                    <Route path="/" component={Home} exact />
-                    <Route path="/animal" component={Animal} exact />
-                    <Route path="/certificate" component={Certificate} exact />
-                    <Route path="/puppies" component={Puppies} exact />
-                    <Route path="/brood" component={Brood} exact />
-                    <Route path="/about" component={About} exact />
-                    <Route path="/gallery" component={Gallery} exact />
-                    <Route path="/meetup" component={Meetup} exact />
+                    <Route path="/blackneasy/" component={Home} exact />
+                    <Route path="/blackneasy/animal" component={Animal} exact />
+                    <Route path="/blackneasy/certificate" component={Certificate} exact />
+                    <Route path="/blackneasy/puppies" component={Puppies} exact />
+                    <Route path="/blackneasy/brood" component={Brood} exact />
+                    <Route path="/blackneasy/about" component={About} exact />
+                    <Route path="/blackneasy/gallery" component={Gallery} exact />
+                    <Route path="/blackneasy/meetup" component={Meetup} exact />
                 </Switch>
             </div>
             <Footer />
