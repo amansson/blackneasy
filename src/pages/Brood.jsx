@@ -67,8 +67,8 @@ const Brood = () => {
                     : ""}
                 {showMother4 ?
                     <div className="select-divider">
-                        <BroodContent brood={"Shantis och Zkrutt"} date={"2 Juli 2017"} images={"shantis1"} />
                         <BroodContent brood={"Shantis och Kazan"} date={"8 Juni 2020"} images={"shantis2"} />
+                        <BroodContent brood={"Shantis och Zkrutt"} date={"2 Juli 2017"} images={"shantis1"} />
                     </div>
                     : ""}
             </div>
