@@ -10,22 +10,22 @@ const Brood = () => {
 
     const toggleMother1 = () => {
         toggleAll();
-        setShowMother1(!showMother1);
+        setShowMother1(true);
     }
 
     const toggleMother2 = () => {
         toggleAll();
-        setShowMother2(!showMother2);
+        setShowMother2(true);
     }
 
     const toggleMother3 = () => {
         toggleAll();
-        setShowMother3(!showMother3);
+        setShowMother3(true);
     }
 
     const toggleMother4 = () => {
         toggleAll();
-        setShowMother4(!showMother4);
+        setShowMother4(true);
     }
 
     const toggleAll = () => {
@@ -49,27 +49,26 @@ const Brood = () => {
                 {showMother1 ?
                     <div className="select-divider">
                         <BroodContent brood={"Easy och Kastor"} date={"20 November 2015 "} images={"easy3"} />
-                        <BroodContent brood={"Easy och Kastor"} date={"20 November 2015 "} images={"easy2"} />
-                        <BroodContent brood={"Easy och Kastor"} date={"20 November 2015 "} images={"easy1"} />
+                        <BroodContent brood={"Easy och Kastor"} date={"5 September 2014 "} images={"easy2"} />
+                        <BroodContent brood={"Easy och Kastor"} date={"9 Februari 2014 "} images={"easy1"} />
                     </div>
                     : ""}
                 {showMother2 ?
                     <div className="select-divider">
-                        <BroodContent brood={"Vimsa och Kazan"} date={"07 December 2018"} images={"brood_vimsa_3"} />
+                        <BroodContent brood={"Vimsa och Kazan"} date={"7 December 2018"} images={"brood_vimsa_3"} />
                         <BroodContent brood={"Vimsa och Zkrutt"} date={"13 Juni 2017"} images={"brood_vimsa_2"} />
-                        <BroodContent brood={"Vimsa och Zkrutt"} date={"09 Oktober 2016"} images={"brood_vimsa_1"} />
+                        <BroodContent brood={"Vimsa och Zkrutt"} date={"9 Oktober 2016"} images={"brood_vimsa_1"} />
                     </div>
                     : ""}
                 {showMother3 ?
                     <div className="select-divider">
-                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014"} images={"easy3"} />
-                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014"} images={"easy1"} />
+                        <BroodContent brood={"Jixie och Proffen"} date={"14 Mars 2019"} images={"jixie1"} />
                     </div>
                     : ""}
                 {showMother4 ?
                     <div className="select-divider">
-                        <BroodContent brood={"Easy och Kastor"} date={"20 November 2015"} images={"easy3"} />
-                        <BroodContent brood={"Easy och Kastor"} date={"05 September 2014"} images={"easy2"} />
+                        <BroodContent brood={"Shantis och Kazan"} date={"8 Juni 2020"} images={"shantis2"} />
+                        <BroodContent brood={"Shantis och Zkrutt"} date={"2 Juli 2017"} images={"shantis1"} />
                     </div>
                     : ""}
             </div>

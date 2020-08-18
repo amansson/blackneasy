@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer>
             <p>Namn: Marie-Louise</p>
-            <p>Telefon: 0735-34343423</p>
+            <p>Telefon: 0706-170833</p>
             <p>Mail: stadning@hotmail.com</p>
         </footer>
     )

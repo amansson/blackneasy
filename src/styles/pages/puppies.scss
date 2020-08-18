@@ -1,7 +1,7 @@
 .card-puppies {
     display: grid;
-    column-gap: 40px;
-    row-gap: 30px;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
 .puppies-select {
@@ -46,8 +46,9 @@
 
 .puppies-images {
     display: grid;
-    column-gap: 50px;
-    row-gap: 40px;    
+    column-gap: 20px;
+    row-gap: 20px; 
+    width: 100%;   
 
     img {
         border-radius: 5px;
@@ -63,29 +64,8 @@
     }
 }
 
-// Small devices (portrait phones, 576px and down)
-@media (max-width: 576px) {
-    .card-puppies {
-        grid-template-columns: 1fr;
-    }
-
-    .puppies-images {
-        grid-template-columns: 1fr;
-    }
-}
-
 // Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
-    .card-puppies {
-        grid-template-columns: 1fr;
-    }
-    .puppies-images {
-        grid-template-columns: 1fr;
-    }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
+@media (min-width: 100px) {
     .card-puppies {
         grid-template-columns: 1fr;
     }

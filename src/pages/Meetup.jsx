@@ -8,17 +8,17 @@ const Meetup = () => {
 
     const toggleKennel1 = () => {
         toggleAll();
-        setKennel1(!showKennel1);
+        setKennel1(true);
     }
 
     const toggleKennel2 = () => {
         toggleAll();
-        setKennel2(!showKennel2);
+        setKennel2(true);
     }
 
     const toggleKennel3 = () => {
         toggleAll();
-        setKennel3(!showKennel3);
+        setKennel3(true);
     }
 
     const toggleAll = () => {

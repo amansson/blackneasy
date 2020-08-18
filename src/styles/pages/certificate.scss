@@ -3,23 +3,27 @@
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 50px;
 
+    img {
+        width: 100%;
+    } 
+
     .card {
         position: relative;
         width: 100%;
-        box-shadow: 0 0 30px $box-shadow;
+        box-shadow: 0 0 15px $box-shadow;
+
+        &:hover {
+            filter: brightness(100%);
+            @extend .zoom-background-hover;
+            cursor: pointer;
+        }
 
         img {
             display: block;
             width: 100%;
-            height: auto;
             object-fit: cover;
             filter: brightness(50%);
             border-radius: 10px;
-
-            &:hover {
-                filter: brightness(100%);
-                @extend .zoom-background-hover;
-            }
         }
 
         .caption {
@@ -31,15 +35,11 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-
-        &:hover {
-            cursor: pointer;
-        }
     }
 }
 
 // Smallest device
-@media (min-width: 100px) and (max-width: 575px) {
+@media (min-width: 100px) {
     .cards-certificate {
         grid-template-columns: 1fr 1fr;
     }

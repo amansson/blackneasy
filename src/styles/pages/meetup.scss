@@ -1,6 +1,7 @@
 .select-meetup {
     display: grid;
-    grid-gap: 50px;
+    row-gap: 20px;
+    column-gap: 20px;
 
     .select {
         width: 100%;
@@ -42,7 +43,12 @@
 
 .cards-meetup {
     display: grid;
-    grid-gap: 50px;
+    column-gap: 20px;
+    row-gap: 10px;
+
+    img {
+        width: 100%;
+    }
 
     .card {
         
