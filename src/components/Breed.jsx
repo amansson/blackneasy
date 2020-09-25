@@ -5,9 +5,12 @@ import { Image, Transformation } from 'cloudinary-react';
 import { FaHeart } from 'react-icons/fa';
 
 const BreedJixie = (props) => {
-    const imageData = FetchData(`https://res.cloudinary.com/blackneasy/image/list/${props.images}.json`, {});
-    if (!imageData.response) {
-        return <div className="loading">Loading...</div>
+    let imageData = "";
+    if (props.images != "") {
+        imageData = FetchData(`https://res.cloudinary.com/blackneasy/image/list/${props.images}.json`, {});
+        if (!imageData.response) {
+            return "";
+        }
     }
 
     return (
@@ -57,19 +60,21 @@ const BreedJixie = (props) => {
                 <div></div>
                 <div></div>
             </div>
-            <Masonry columns={3}>
-                {
-                    imageData.response.resources.map(image => {
-                        return (
-                            <Image key={image.public_id} cloudName="blackneasy" publicId={image.public_id} />
-                        )
-                    })
-                }
-            </Masonry>
-            <br/>
-            <br/>
+            { props.images != "" ?
+                <Masonry columns={3}>
+                    {
+                        imageData.response.resources.map(image => {
+                            return (
+                                <Image key={image.public_id} cloudName="blackneasy" publicId={image.public_id} />
+                            )
+                        })
+                    }
+                </Masonry>
+            : ""}
 
-
+            <br />
+            <br />
+            
         </Fragment>
     )
 }
