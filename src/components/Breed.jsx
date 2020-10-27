@@ -23,14 +23,7 @@ const BreedJixie = (props) => {
                 <div className="breed-couple">
                     <div class="couple">
                         <Image cloudName="blackneasy" publicId={props.imageMother} >
-                            <Transformation
-                                crop="fill"
-                                gravity="faces"
-                                width="300"
-                                height="200"
-                                dpr="auto"
-                                responsive_placeholder="blank"
-                            />
+        
                         </Image>
 
 
