@@ -11,7 +11,7 @@ const Landing = () => {
             </div>
 
             <div className="wrapper">
-                <Breed header={"Parade - Russkaya Tsvetnasa Bolonka - Väntar valpar vecka 40 2020"} images={""} imageMother={"breed/Cinderella_breed"} imageFather={"breed/FeyerVerk_breed"} nameMother={"Black'n Easy - Cinderella"} nameFather={"Russkaya Roskosh - Feyer Verk"} />
+                <Breed header={"Parade - Russkaya Tsvetnasa Bolonka - Väntar valpar vecka 40 2020"} images={""} imageMother={"breed/Cinderella_breed"} imageFather={"breed/FeyerVerk_breed2"} nameMother={"Black'n Easy - Cinderella"} nameFather={"Russkaya Roskosh - Feyer Verk"} />
             </div>
         </Fragment>
     )
