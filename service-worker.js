@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/blackneasy/precache-manifest.c504a65d6787131e7efe80e2c36d57b1.js"
+  "/blackneasy/precache-manifest.958a07093cb92ca3a584dea5b0e4df56.js"
 );
 
 self.addEventListener('message', (event) => {
