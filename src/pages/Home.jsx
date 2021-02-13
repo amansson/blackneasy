@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import Breed from '../components/Breed';
+import BreedPlan from '../components/BreedPlan';
 
 const Landing = () => {
     return (
@@ -11,7 +12,7 @@ const Landing = () => {
             </div>
 
             <div className="wrapper">
-                
+                <BreedPlan header={"Groenendael och Tervuerens"} header2={"Planerad parning, valpar Vår/Sommar"} images={"puppies_shantis_zkrutt"} />
             </div>
         </Fragment>
     )
