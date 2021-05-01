@@ -13,7 +13,8 @@ const Landing = () => {
             </div>
 
             <div className="wrapper">
-                <BreedPlan header={"Valpar väntas mellan Sp1 LD Startklass RLDN Thunderwolfs Dream Boy (SE38782/2017) ❤ och Black'n Easys Leda (SE44579/2017) ❤ och  Black'n Easys Jixie (SE55765/2016) ❤"} header2={"Groenendael o Tervuerens Leveransklara till midsommar"} images={"breed_leda_jixie_dreamboy"} />
+                <Breed header={"Valpar födda 19 April 2021"} images={"puppies_leda_dreamboy"} imageMother={"profile/leda_profile"} imageFather={"profile/Dreamboy_profile"} nameMother={"Leda (SE44579/2017)"} nameFather={"Dream boy (SE38782/2017)"} />
+                <Breed header={"Valpar födda 26 April 2021"} images={"puppies_jixie_dreamboy"} imageMother={"profile/jixie_profile"} imageFather={"profile/Dreamboy_profile"} nameMother={"Jixie (SE55765/2016)"} nameFather={"Dream boy (SE38782/2017)"} />
             </div>
         </Fragment>
     )
