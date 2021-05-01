@@ -8,7 +8,7 @@ const Landing = () => {
         <Fragment>
             <div className="banner">
                 <div>
-                    <p>Belgisk Vallhund / Tervuerens, Groendahl, Russkaya Tsvetnaya Bolonka</p>
+                    <p>Leda och Jixie har fött valpar se nedan för mer information, Kontakt: Marie-Louise, 0706-170833, stadning@hotmail.com</p>
                 </div>
             </div>
 
