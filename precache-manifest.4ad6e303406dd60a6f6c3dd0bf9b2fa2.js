@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b74cb1e784188e581920242e80496e32",
+    "revision": "3eb8e791fce74b87325df8a872a1ee66",
     "url": "/blackneasy/index.html"
   },
   {
-    "revision": "669ff02f579fec40fa37",
-    "url": "/blackneasy/static/css/main.95332fa1.chunk.css"
+    "revision": "558dfc42a42710fa5159",
+    "url": "/blackneasy/static/css/main.e6ce4755.chunk.css"
   },
   {
     "revision": "f16433cdf21b3f104dac",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/blackneasy/static/js/2.d63fbdc4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "669ff02f579fec40fa37",
-    "url": "/blackneasy/static/js/main.9766a96a.chunk.js"
+    "revision": "558dfc42a42710fa5159",
+    "url": "/blackneasy/static/js/main.0576c6fe.chunk.js"
   },
   {
     "revision": "ebc83dc44bcafc5c46fa",
