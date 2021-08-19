@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/blackneasy/static/css/main.e6ce4755.chunk.css",
-    "main.js": "/blackneasy/static/js/main.0576c6fe.chunk.js",
-    "main.js.map": "/blackneasy/static/js/main.0576c6fe.chunk.js.map",
+    "main.css": "/blackneasy/static/css/main.5936ea49.chunk.css",
+    "main.js": "/blackneasy/static/js/main.92158964.chunk.js",
+    "main.js.map": "/blackneasy/static/js/main.92158964.chunk.js.map",
     "runtime-main.js": "/blackneasy/static/js/runtime-main.e1e0cb0b.js",
     "runtime-main.js.map": "/blackneasy/static/js/runtime-main.e1e0cb0b.js.map",
-    "static/js/2.d63fbdc4.chunk.js": "/blackneasy/static/js/2.d63fbdc4.chunk.js",
-    "static/js/2.d63fbdc4.chunk.js.map": "/blackneasy/static/js/2.d63fbdc4.chunk.js.map",
+    "static/js/2.9c397eaa.chunk.js": "/blackneasy/static/js/2.9c397eaa.chunk.js",
+    "static/js/2.9c397eaa.chunk.js.map": "/blackneasy/static/js/2.9c397eaa.chunk.js.map",
     "index.html": "/blackneasy/index.html",
-    "precache-manifest.4ad6e303406dd60a6f6c3dd0bf9b2fa2.js": "/blackneasy/precache-manifest.4ad6e303406dd60a6f6c3dd0bf9b2fa2.js",
+    "precache-manifest.a7a0e6c6ed6ac7328338559414d3c320.js": "/blackneasy/precache-manifest.a7a0e6c6ed6ac7328338559414d3c320.js",
     "service-worker.js": "/blackneasy/service-worker.js",
-    "static/css/main.e6ce4755.chunk.css.map": "/blackneasy/static/css/main.e6ce4755.chunk.css.map",
-    "static/js/2.d63fbdc4.chunk.js.LICENSE.txt": "/blackneasy/static/js/2.d63fbdc4.chunk.js.LICENSE.txt"
+    "static/css/main.5936ea49.chunk.css.map": "/blackneasy/static/css/main.5936ea49.chunk.css.map",
+    "static/js/2.9c397eaa.chunk.js.LICENSE.txt": "/blackneasy/static/js/2.9c397eaa.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e1e0cb0b.js",
-    "static/js/2.d63fbdc4.chunk.js",
-    "static/css/main.e6ce4755.chunk.css",
-    "static/js/main.0576c6fe.chunk.js"
+    "static/js/2.9c397eaa.chunk.js",
+    "static/css/main.5936ea49.chunk.css",
+    "static/js/main.92158964.chunk.js"
   ]
 }
