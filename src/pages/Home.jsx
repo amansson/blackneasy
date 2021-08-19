@@ -13,7 +13,7 @@ const Landing = () => {
             </div>
 
             <div className="wrapper">
-                <Breed header={"Valpar - Russkaya Tsvetnasa Bolonka - Cindy födde 4 valpar - 3 Augusti 2021"} images={"puppies_cindy_linus"} imageMother={"breed/Cinderella_breed"} imageFather={"breed/Linus"} nameMother={"Black'n Easy Cinderella - AS59730/2017"} nameFather={"Mellvins Milarious Buggati (Linus) - AS43295/2019"} />                
+                <Breed header={"Valpar - Russkaya Tsvetnasa Bolonka - Cindy födde 3 valpar (1 tik och 2 hanar) - 3 Augusti 2021"} images={"puppies_cindy_linus"} imageMother={"breed/Cinderella_breed"} imageFather={"breed/Linus"} nameMother={"Black'n Easy Cinderella - AS59730/2017"} nameFather={"Mellvins Milarious Buggati (Linus) - AS43295/2019"} />                
             </div>
         </Fragment>
     )
