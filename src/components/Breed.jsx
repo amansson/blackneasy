@@ -21,30 +21,30 @@ const BreedJixie = (props) => {
             <div className="breed">
                 <div></div>
                 <div className="breed-couple">
-                    <div class="couple">
+                    <div className="couple">
                         <Image cloudName="blackneasy" publicId={props.imageMother} >
         
                         </Image>
 
 
-                        <div class="couple-infos">
+                        <div className="couple-infos">
                             <h2>{props.nameMother}</h2>
                             <p>Mamma</p>
                         </div>
                     </div>
                     <div className="bg">
-                        <div class="avatar-bordered">
+                        <div className="avatar-bordered">
                             <div className="heart"><FaHeart /></div>
                         </div>
                     </div>
-                    <div class="couple">
+                    <div className="couple">
                         <Image cloudName="blackneasy" publicId={props.imageFather}>
                             <Transformation
                                 crop="scale"
                                 gravity="faces"
                             />
                         </Image>
-                        <div class="couple-infos">
+                        <div className="couple-infos">
                             <h2>{props.nameFather}</h2>
                             <p>Pappa</p>
                         </div>
