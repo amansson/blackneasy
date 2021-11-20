@@ -5,6 +5,7 @@ const Meetup = () => {
     const [showKennel1, setKennel1] = useState(true);
     const [showKennel2, setKennel2] = useState(false);
     const [showKennel3, setKennel3] = useState(false);
+    const [showKennel4, setKennel4] = useState(false);
 
     const toggleKennel1 = () => {
         toggleAll();
@@ -21,10 +22,16 @@ const Meetup = () => {
         setKennel3(true);
     }
 
+    const toggleKennel4 = () => {
+        toggleAll();
+        setKennel4(true);
+    }
+
     const toggleAll = () => {
         setKennel1(false);
         setKennel2(false);
         setKennel3(false);
+        setKennel4(false);
     }
 
     return (
@@ -49,6 +56,12 @@ const Meetup = () => {
                         <p className="caption">Kennel Träff 3</p>
                     </a>
                 </div>
+                <div className="select">
+                    <a href="#" onClick={toggleKennel4}>
+                        <img src="https://res.cloudinary.com/blackneasy/image/upload/v1637418349/meetup/4/257916639_643359033508645_2175558208546848324_n_dxny1z.jpg" alt="Kennel Träff 3" />
+                        <p className="caption">Kennel Träff 4 - 31 okt 2021</p>
+                    </a>
+                </div>
             </div>
 
             <div className="meetup-line"></div>
@@ -62,6 +75,9 @@ const Meetup = () => {
                     : ""}
                 {showKennel3 ?
                     <MeetupContent meetup={"meetup3"} />
+                    : ""}
+                {showKennel4 ?
+                    <MeetupContent meetup={"meetup4"} />
                     : ""}
             </div>
         </div>
