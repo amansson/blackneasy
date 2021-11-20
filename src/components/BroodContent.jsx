@@ -19,10 +19,10 @@ const BroodContent = (props) => {
                     return (
                         <div className="card" key={image.public_id}>
                             <Image cloudName="blackneasy" publicId={image.public_id} alt="puppy" />
-                            <div class="info">
-                                <span class="gender">{image.context.custom.gender}</span>
+                            <div className="info">
+                                <span className="gender">{image.context.custom.gender}</span>
                                 <h3>{image.context.custom.caption}</h3>
-                                <span class="location">{image.context.custom.location}</span>
+                                <span className="location">{image.context.custom.location}</span>
                             </div>
                         </div>
                     )
