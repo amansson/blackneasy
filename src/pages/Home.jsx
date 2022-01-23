@@ -14,7 +14,7 @@ const Landing = () => {
             </div>
 
             <div className="wrapper">
-                <Christmas />
+                
             </div>
         </Fragment>
     )
