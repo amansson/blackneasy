@@ -23,10 +23,11 @@ const BreedJixie = (props) => {
                 <div className="breed-couple">
                     <div className="couple">
                         <Image cloudName="blackneasy" publicId={props.imageMother} >
-        
+                            <Transformation                                
+                                crop="crop"
+                                gravity="face"
+                            />
                         </Image>
-
-
                         <div className="couple-infos">
                             <h2>{props.nameMother}</h2>
                             <p>Mamma</p>
@@ -40,8 +41,8 @@ const BreedJixie = (props) => {
                     <div className="couple">
                         <Image cloudName="blackneasy" publicId={props.imageFather}>
                             <Transformation
-                                crop="scale"
-                                gravity="faces"
+                                crop="crop"
+                                gravity="face"
                             />
                         </Image>
                         <div className="couple-infos">
@@ -53,7 +54,7 @@ const BreedJixie = (props) => {
                 <div></div>
                 <div></div>
             </div>
-            { props.images != "" ?
+            {props.images != "" ?
                 <Masonry columns={3}>
                     {
                         imageData.response.resources.map(image => {
@@ -63,11 +64,11 @@ const BreedJixie = (props) => {
                         })
                     }
                 </Masonry>
-            : ""}
+                : ""}
 
             <br />
             <br />
-            
+
         </Fragment>
     )
 }
