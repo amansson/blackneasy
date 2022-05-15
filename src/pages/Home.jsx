@@ -14,9 +14,21 @@ const Landing = () => {
             </div>
 
             <div className="wrapper">
-                <BreedPlan header={"Planerad parning till våren - Kimya och hane (ej klar) - Valpar till sommaren"}
-                    header2={"Valpar till nya hem till sommaren - kontakta mig för intresse"}
-                    images={"breed_kimya"}
+                <Breed header={"Tysk Kleinspetitz - valpar 10 April (3 hanar och 1 tik, alla svarta) "}
+                    images={"puppies_brownie_fellboms"}
+                    imageMother={"profile/Brownie_profile"}
+                    imageFather={"profile/Fellboms_profile"}
+                    nameMother={"Ellinghort's Golden EYE (Brownie)"}
+                    nameFather={"Fellboms Czabo - SE50391/2016 C.I.B, SEUCH, DKUCH, NOUCH, Nordic Show Champion, NO V-21 "}
+                />
+            </div>
+            <div className="wrapper">
+                <Breed header={"Groenendael - Leda och Lioyd - parade maj 2022"}
+                    images={""}
+                    imageMother={"profile/Leda_profile"}
+                    imageFather={"profile/Lioyd_profile"}
+                    nameMother={"Black'n Easy Leda"}
+                    nameFather={"Ct Lioyd Av Nanqijala"}
                 />
             </div>
         </Fragment>
@@ -24,3 +36,4 @@ const Landing = () => {
 }
 
 export default Landing;
+
