@@ -13,12 +13,13 @@ const Landing = () => {
                 </div>
             </div>
             <div className="wrapper">
-                <Breed header={"Groenendael - Leda och Lioyd - Valpar födda 8 Juli - 6 veckor gamla"}
-                    images={"puppies_leda_lioyd"}
-                    imageMother={"profile/Leda_profile"}
-                    imageFather={"profile/Lioyd_profile"}
-                    nameMother={"Black'n Easy Leda"}
-                    nameFather={"Ct Lioyd Av Nanqijala"}
+                <Breed header={"RUSSKAJA TSVETSNAJA BOLONKA - Valpar 16/8 2022 (1 tik och 3 hanar)"}
+                    header2={"Intresserad av en liten Bolonka valp? Leveransklara mitten av oktober"}
+                    images={"puppies_tassa_khazar"}
+                    imageMother={"profile/Tassa_profile"}
+                    imageFather={"profile/Khazar_profile"}
+                    nameMother={"Black'n Easys Tassa"}
+                    nameFather={"Khazar Shiro Sho"}
                 />
             </div>
             <div className="wrapper">

@@ -17,6 +17,7 @@ const BreedJixie = (props) => {
         <Fragment>
             <div className="header">
                 <h2>{props.header}</h2>
+                <p>{props.header2}</p>
             </div>
             <div className="breed">
                 <div></div>
