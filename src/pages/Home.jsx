@@ -12,8 +12,8 @@ const Landing = () => {
                     <p>Kontakt: Marie-Louise, 0706-170833, stadning@hotmail.com</p>
                 </div>
             </div>
-            <div className="wrapper">
-                
+            <div className="wrapper">                
+                <Christmas />
             </div>
         </Fragment>
     )
