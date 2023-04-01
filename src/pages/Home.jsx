@@ -3,7 +3,9 @@ import Breed from '../components/Breed';
 import BreedPlan from '../components/BreedPlan';
 import { FaHeart } from 'react-icons/fa';
 import Christmas from '../components/Christmas';
+import FetchData from '../components/FetchData';
 import Masonry from '../components/Masonry';
+import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
 
 const Landing = () => {
     const imageData = FetchData('https://res.cloudinary.com/blackneasy/image/list/home.json', {});
