@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/blackneasy/static/css/main.7296febc.chunk.css",
-    "main.js": "/blackneasy/static/js/main.45732728.chunk.js",
-    "main.js.map": "/blackneasy/static/js/main.45732728.chunk.js.map",
+    "main.js": "/blackneasy/static/js/main.bf59743c.chunk.js",
+    "main.js.map": "/blackneasy/static/js/main.bf59743c.chunk.js.map",
     "runtime-main.js": "/blackneasy/static/js/runtime-main.30742a5e.js",
     "runtime-main.js.map": "/blackneasy/static/js/runtime-main.30742a5e.js.map",
     "static/js/2.277f62a5.chunk.js": "/blackneasy/static/js/2.277f62a5.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.30742a5e.js",
     "static/js/2.277f62a5.chunk.js",
     "static/css/main.7296febc.chunk.css",
-    "static/js/main.45732728.chunk.js"
+    "static/js/main.bf59743c.chunk.js"
   ]
 }
