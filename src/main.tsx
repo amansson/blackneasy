@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./errorPage";
 import Animal from "./pages/Animal.tsx";
 import Home from "./pages/Home.tsx";
+import Photo from "./pages/Photo.tsx";
 
 const router = createBrowserRouter([
     {
@@ -17,11 +18,17 @@ const router = createBrowserRouter([
         path: "/animal",
         element: <Animal />,
     },
+    {
+        path: "/photo",
+        element: <Photo />,
+    },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>
         <App />
-        <RouterProvider router={router} />
+        <div className="container mx-auto mt-6">
+            <RouterProvider router={router} />
+        </div>
     </React.StrictMode>
 );
