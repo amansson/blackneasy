@@ -2,8 +2,8 @@ import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-    { name: "Home", href: "#", current: true },
-    { name: "Djur", href: "#", current: false },
+    { name: "Home", href: "/", current: true },
+    { name: "Djur", href: "/animal", current: false },
     { name: "MH och HD", href: "#", current: false },
     { name: "Valpar", href: "#", current: false },
     { name: "Kullar", href: "#", current: false },
@@ -46,12 +46,12 @@ export default function Example() {
                                 <div className="flex flex-shrink-0 items-center">
                                     <img
                                         className="block h-8 w-auto lg:hidden"
-                                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                                        src="./assets/logo.png"
                                         alt="Your Company"
                                     />
                                     <img
                                         className="hidden h-8 w-auto lg:block"
-                                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                                        src="./assets/logo.png"
                                         alt="Your Company"
                                     />
                                 </div>
