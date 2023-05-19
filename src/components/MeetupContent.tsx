@@ -1,10 +1,16 @@
+import { FC, ReactElement } from "react";
 import FetchData from "../utils/fetchData";
 import { AdvancedImage } from "@cloudinary/react";
 import { CloudinaryImage } from "@cloudinary/url-gen";
 
-const PhotoCollage = () => {
+type meetupProps = {
+    meetup: string;
+};
+
+const MeetupContent: FC<meetupProps> = ({ meetup }): ReactElement => {
     const imageData: any = FetchData(
-        "https://res.cloudinary.com/blackneasy/image/list/gallery.json"
+        `https://res.cloudinary.com/blackneasy/image/list/${meetup}.json`,
+        {}
     );
     if (!imageData.response) {
         return <div className="loading">Loading...</div>;
@@ -33,4 +39,4 @@ const PhotoCollage = () => {
     );
 };
 
-export default PhotoCollage;
+export default MeetupContent;

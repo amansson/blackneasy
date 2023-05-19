@@ -9,7 +9,7 @@ const navigation = [
     { name: "Kullar", href: "#", current: false },
     { name: "Om mig", href: "/about", current: false },
     { name: "Foto", href: "/photo", current: false },
-    { name: "Kennel träff", href: "#", current: false },
+    { name: "Kennel träff", href: "/meetup", current: false },
 ];
 
 function classNames(...classes: string[]) {
