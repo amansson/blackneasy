@@ -7,7 +7,7 @@ const navigation = [
     { name: "MH och HD", href: "#", current: false },
     { name: "Valpar", href: "#", current: false },
     { name: "Kullar", href: "#", current: false },
-    { name: "Om mig", href: "#", current: false },
+    { name: "Om mig", href: "/about", current: false },
     { name: "Foto", href: "/photo", current: false },
     { name: "Kennel träff", href: "#", current: false },
 ];

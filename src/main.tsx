@@ -7,6 +7,7 @@ import ErrorPage from "./errorPage";
 import Animal from "./pages/Animal.tsx";
 import Home from "./pages/Home.tsx";
 import Photo from "./pages/Photo.tsx";
+import About from "./pages/About.tsx";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
     {
         path: "/photo",
         element: <Photo />,
+    },
+    {
+        path: "/about",
+        element: <About />,
     },
 ]);
 
