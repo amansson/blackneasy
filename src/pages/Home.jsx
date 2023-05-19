@@ -35,7 +35,7 @@ const Landing = () => {
 						images={"breed_kimya_dreamboy"}
 						imageMother={"profile/Kimya_profile_2"}
 						imageFather={"profile/Dreamboy_profile"}
-						nameMother={"Black'n Easy Leda"}
+						nameMother={"Black'n Easy Kimya"}
 						nameFather={"Thunderwolf's Dream Boy"}
 					/>
 				</div>
