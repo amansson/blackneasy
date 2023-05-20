@@ -9,6 +9,7 @@ import Home from "./pages/Home.tsx";
 import Photo from "./pages/Photo.tsx";
 import About from "./pages/About.tsx";
 import Meetup from "./pages/Meetup.tsx";
+import Puppy from "./pages/Puppy.tsx";
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
     {
         path: "/meetup",
         element: <Meetup />,
+    },
+    {
+        path: "/puppy",
+        element: <Puppy />,
     },
 ]);
 

@@ -5,7 +5,7 @@ const navigation = [
     { name: "Home", href: "/", current: true },
     { name: "Djur", href: "/animal", current: false },
     { name: "MH och HD", href: "#", current: false },
-    { name: "Valpar", href: "#", current: false },
+    { name: "Valpar", href: "/puppy", current: false },
     { name: "Kullar", href: "#", current: false },
     { name: "Om mig", href: "/about", current: false },
     { name: "Foto", href: "/photo", current: false },
