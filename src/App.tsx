@@ -9,7 +9,7 @@ import Photo from "./pages/Photo.tsx";
 import About from "./pages/About.tsx";
 import Meetup from "./pages/Meetup.tsx";
 import Puppy from "./pages/Puppy.tsx";
-import Mhhd from "./pages/Mhhd.tsx";
+import Certificate from "./pages/Certificate.tsx";
 import Navbar from "./components/Navbar.tsx";
 
 const router = createBrowserRouter([
@@ -39,8 +39,8 @@ const router = createBrowserRouter([
         element: <Puppy />,
     },
     {
-        path: "/mhhd",
-        element: <Mhhd />,
+        path: "/certificate",
+        element: <Certificate />,
     },
 ]);
 
