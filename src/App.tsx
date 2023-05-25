@@ -11,6 +11,7 @@ import Meetup from "./pages/Meetup.tsx";
 import Puppy from "./pages/Puppy.tsx";
 import Certificate from "./pages/Certificate.tsx";
 import Navbar from "./components/Navbar.tsx";
+import Litter from "./pages/Litter.tsx";
 
 const router = createBrowserRouter([
     {
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
     {
         path: "/certificate",
         element: <Certificate />,
+    },
+    {
+        path: "/litter",
+        element: <Litter />,
     },
 ]);
 

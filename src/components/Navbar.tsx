@@ -6,7 +6,7 @@ const navigation = [
     { name: "Djur", href: "/animal", current: false },
     { name: "MH och HD", href: "/certificate", current: false },
     { name: "Valpar", href: "/puppy", current: false },
-    { name: "Kullar", href: "#", current: false },
+    { name: "Kullar", href: "litter", current: false },
     { name: "Om mig", href: "/about", current: false },
     { name: "Foto", href: "/photo", current: false },
     { name: "Kennel träff", href: "/meetup", current: false },

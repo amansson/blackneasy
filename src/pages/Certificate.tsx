@@ -2,28 +2,9 @@ import { AdvancedImage } from "@cloudinary/react";
 import { CloudinaryImage } from "@cloudinary/url-gen";
 import { useEffect, useState } from "react";
 
-type certificateData = {
-    public_id: string;
-    version: number;
-    format: string;
-    width: number;
-    height: number;
-    type: string;
-    created_at: string;
-    context: {
-        custom: {
-            caption: string;
-            Category: string;
-            type: string;
-        };
-    };
-};
-
 const Certificate = () => {
     const [categories, setCategories] = useState<string[]>([]);
-    const [certificateData, setCertificateData] = useState<certificateData[]>(
-        []
-    );
+    const [certificateData, setCertificateData] = useState<ImageDataType[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
 
     const fetchImageData = async () => {
