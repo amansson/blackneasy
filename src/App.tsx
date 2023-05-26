@@ -12,6 +12,7 @@ import Puppy from "./pages/Puppy.tsx";
 import Certificate from "./pages/Certificate.tsx";
 import Navbar from "./components/Navbar.tsx";
 import Litter from "./pages/Litter.tsx";
+import Footer from "./components/Footer.tsx";
 
 const router = createBrowserRouter([
     {
@@ -55,5 +56,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <div className="container mx-auto mt-6">
             <RouterProvider router={router} />
         </div>
+        <Footer />
     </React.StrictMode>
 );
