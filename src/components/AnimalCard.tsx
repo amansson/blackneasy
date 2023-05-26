@@ -1,4 +1,6 @@
 import { FC, ReactElement } from "react";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { AdvancedImage } from "@cloudinary/react";
 
 type AnimalProps = {
     name: string;
@@ -7,19 +9,26 @@ type AnimalProps = {
 };
 
 const AnimalCard: FC<AnimalProps> = ({ name, ras, image }): ReactElement => {
-    console.log("hej");
+    const cld = new Cloudinary({
+        cloud: {
+            cloudName: "blackneasy",
+        },
+    });
+
     return (
-        <div className="max-w-xs p-6 rounded-md shadow-md bg-neutral-100 dark:bg-gray-900 dark:text-gray-50">
-            <img
-                src={image}
-                alt="Profile image"
-                className="object-cover object-center w-full rounded-md aspect-video dark:bg-gray-500"
+        <div className="max-w-xs rounded-md shadow-md">
+            <AdvancedImage
+                cldImg={cld.image(image)}
+                className="object-cover object-center w-full rounded-t-md h-72"
             />
-            <div className="mt-6 mb-2">
-                <span className="block text-xs font-medium tracking-widest uppercase text-slate-600 dark:text-violet-400">
-                    {ras}
-                </span>
-                <h2 className="text-xl font-semibold tracking-wide">{name}</h2>
+
+            <div className="flex flex-col justify-between p-6 space-y-8">
+                <div className="space-y-2">
+                    <h2 className="text-3xl font-semibold tracking-wide">
+                        {name}
+                    </h2>
+                    <p className="">{ras}</p>
+                </div>
             </div>
         </div>
     );

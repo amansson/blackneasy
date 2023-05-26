@@ -1,3 +1,5 @@
+import { ImageDataType } from "./types";
+
 const fetchImageData = async (
     litter: string | string[]
 ): Promise<ImageDataType[]> => {
@@ -32,10 +34,10 @@ const fetchImageData = async (
 export const fetchData = async (
     setData: React.Dispatch<React.SetStateAction<ImageDataType[]>>,
     setLoading: React.Dispatch<React.SetStateAction<boolean>>,
-    breed: string
+    imageSet: string | string[]
 ) => {
     try {
-        const data = await fetchImageData(breed);
+        const data = await fetchImageData(imageSet);
         setData(data);
     } finally {
         setLoading(false);
