@@ -2,6 +2,7 @@ import { fetchData } from "../utils/fetchData";
 import { AdvancedImage } from "@cloudinary/react";
 import { CloudinaryImage } from "@cloudinary/url-gen";
 import { useEffect, useState } from "react";
+import Loading from "../components/Loading";
 
 const PhotoCollage = () => {
     const [loading, setLoading] = useState(true);
@@ -11,8 +12,8 @@ const PhotoCollage = () => {
         fetchData(setImageData, setLoading, "gallery");
     }, []);
 
-    if (loading === true) {
-        return <div>Loading data </div>;
+    if (loading) {
+        return <Loading />;
     }
 
     return (

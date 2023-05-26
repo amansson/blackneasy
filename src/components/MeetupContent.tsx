@@ -2,6 +2,7 @@ import { FC, ReactElement, useEffect, useState } from "react";
 import { fetchData } from "../utils/fetchData";
 import { AdvancedImage } from "@cloudinary/react";
 import { CloudinaryImage } from "@cloudinary/url-gen";
+import Loading from "./Loading";
 
 type meetupProps = {
     meetup: string;
@@ -15,8 +16,8 @@ const MeetupContent: FC<meetupProps> = ({ meetup }): ReactElement => {
         fetchData(setImageData, setLoading, meetup);
     }, [meetup]);
 
-    if (loading === true) {
-        return <div>Loading data </div>;
+    if (loading) {
+        return <Loading />;
     }
 
     return (

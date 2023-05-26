@@ -2,6 +2,7 @@ import { FC, ReactElement, useEffect, useState } from "react";
 import { AdvancedImage } from "@cloudinary/react";
 import { CloudinaryImage } from "@cloudinary/url-gen";
 import { fetchData } from "../utils/fetchData";
+import Loading from "./Loading";
 
 type puppyProps = {
     puppy: string;
@@ -15,8 +16,8 @@ const PuppyContent: FC<puppyProps> = ({ puppy }): ReactElement => {
         fetchData(setImageData, setLoading, puppy);
     }, [puppy]);
 
-    if (loading === true) {
-        return <div>Loading data </div>;
+    if (loading) {
+        return <Loading />;
     }
 
     return (

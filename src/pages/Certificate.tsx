@@ -1,6 +1,7 @@
 import { AdvancedImage } from "@cloudinary/react";
 import { CloudinaryImage } from "@cloudinary/url-gen";
 import { useEffect, useState } from "react";
+import Loading from "../components/Loading";
 
 const Certificate = () => {
     const [categories, setCategories] = useState<string[]>([]);
@@ -46,8 +47,8 @@ const Certificate = () => {
                   categories.includes(image.context.custom.Category)
               );
 
-    if (loading === true) {
-        return <div>Loading data </div>;
+    if (loading) {
+        return <Loading />;
     }
 
     return (

@@ -3,6 +3,7 @@ import { AdvancedImage } from "@cloudinary/react";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { HeartIcon } from "@heroicons/react/24/solid";
 import { fetchData } from "../utils/fetchData";
+import Loading from "../components/Loading";
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
@@ -20,8 +21,8 @@ const Home = () => {
         fetchData(setImageData2, setLoading, "home");
     }, []);
 
-    if (loading === true) {
-        return <div>Loading data </div>;
+    if (loading) {
+        return <Loading />;
     }
 
     return (

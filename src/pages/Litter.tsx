@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import LitterCard from "../components/LitterCard";
 import LitterMom from "../components/LitterMom";
+import Loading from "../components/Loading";
 
 type LitterMotherType = {
     [key: string]: string[];
@@ -85,8 +86,8 @@ const Litter = () => {
         fetchImageData(litterMother);
     }, [litterMother]);
 
-    if (loading === true) {
-        return <div>Loading data </div>;
+    if (loading) {
+        return <Loading />;
     }
 
     return (
