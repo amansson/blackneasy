@@ -1,25 +1,43 @@
-import { useState, useEffect } from "react";
+const fetchImageData = async (
+    litter: string | string[]
+): Promise<ImageDataType[]> => {
+    try {
+        const entries = Array.isArray(litter) ? litter : [litter];
 
-const FetchData = (
-    url: RequestInfo | URL,
-    options?: RequestInit | undefined
-) => {
-    const [response, setResponse] = useState(null);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await fetch(url, options);
-                const json = await res.json();
-                setResponse(json);
-            } catch {
-                setError(error);
+        const promises = entries.map(async (entry) => {
+            const response = await fetch(
+                `https://res.cloudinary.com/blackneasy/image/list/${entry}.json`
+            );
+            const data = await response.json();
+            if (response.ok) {
+                return data.resources;
+            } else {
+                console.error("Failed to fetch image data:", data);
+                return [];
             }
-        };
-        fetchData();
-    }, [error, options, url]);
-    return { response, error };
+        });
+
+        const imageData = await Promise.all(promises);
+        const combinedData = imageData.reduce(
+            (acc, curr) => acc.concat(curr),
+            []
+        );
+        return combinedData;
+    } catch (error) {
+        console.error("Error fetching image data:", error);
+        return [];
+    }
 };
 
-export default FetchData;
+export const fetchData = async (
+    setData: React.Dispatch<React.SetStateAction<ImageDataType[]>>,
+    setLoading: React.Dispatch<React.SetStateAction<boolean>>,
+    breed: string
+) => {
+    try {
+        const data = await fetchImageData(breed);
+        setData(data);
+    } finally {
+        setLoading(false);
+    }
+};

@@ -1,18 +1,23 @@
-import FetchData from "../utils/fetchData";
+import { fetchData } from "../utils/fetchData";
 import { AdvancedImage } from "@cloudinary/react";
 import { CloudinaryImage } from "@cloudinary/url-gen";
+import { useEffect, useState } from "react";
 
 const PhotoCollage = () => {
-    const imageData: any = FetchData(
-        "https://res.cloudinary.com/blackneasy/image/list/gallery.json"
-    );
-    if (!imageData.response) {
-        return <div className="loading">Loading...</div>;
+    const [loading, setLoading] = useState(true);
+    const [imageData, setImageData] = useState<ImageDataType[]>([]);
+
+    useEffect(() => {
+        fetchData(setImageData, setLoading, "gallery");
+    }, []);
+
+    if (loading === true) {
+        return <div>Loading data </div>;
     }
 
     return (
         <div className="masonry sm:masonry-sm md:masonry-md xl:masonry-xl">
-            {imageData.response.resources.map((image: any) => {
+            {imageData.map((image: ImageDataType) => {
                 return (
                     <div
                         key={image.public_id}
