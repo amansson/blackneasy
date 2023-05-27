@@ -21,80 +21,65 @@ export default function Example() {
     };
 
     return (
-        <nav className="bg-gray-800">
-            <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-                <div className="relative flex h-16 items-center justify-between">
-                    <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
-                        {/* Mobile menu button*/}
-                        <button
-                            type="button"
-                            className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-                            onClick={toggleMobileMenu}
-                        >
-                            {isMobileMenuOpen ? (
-                                <XMarkIcon
-                                    className="block h-6 w-6"
-                                    aria-hidden="true"
-                                />
-                            ) : (
-                                <Bars3Icon
-                                    className="block h-6 w-6"
-                                    aria-hidden="true"
-                                />
-                            )}
-                        </button>
-                    </div>
-                    <div className="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
-                        <div className="flex flex-shrink-0 items-center">
-                            <img
-                                className="block h-8 w-auto md:hidden"
-                                src="./assets/logo.png"
-                                alt="Your Company"
-                            />
-                            <img
-                                className="hidden h-8 w-auto md:block"
-                                src="./assets/logo.png"
-                                alt="Your Company"
-                            />
-                        </div>
-                        <div className="hidden sm:ml-6 md:block">
-                            <div className="flex space-x-4">
-                                {navigation.map((item) => (
-                                    <NavLink
-                                        key={item.name}
-                                        to={item.href}
-                                        className={({ isActive }) =>
-                                            isActive
-                                                ? "bg-gray-700 text-white p-2 rounded-xl"
-                                                : "text-gray-300 hover:bg-gray-500 hover:text-white p-2 rounded-xl font-medium line"
-                                        }
-                                    >
-                                        {item.name}
-                                    </NavLink>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <nav className="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700bg-white">
+            <div className="flex">
+                <img
+                    className="block h-8 w-auto md:hidden"
+                    src="./assets/logo.png"
+                    alt="Your Company"
+                />
+                <img
+                    className="hidden h-8 w-auto md:block"
+                    src="./assets/logo.png"
+                    alt="Your Company"
+                />
+                <h2>Black and Easy</h2>
             </div>
-            {isMobileMenuOpen && (
-                <div className="md:hidden">
-                    <div className="px-2 pt-2 pb-3 space-y-1">
-                        {navigation.map((item) => (
+
+            <button
+                type="button"
+                className="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0"
+                onClick={toggleMobileMenu}
+            >
+                {isMobileMenuOpen ? (
+                    <XMarkIcon
+                        className="h-6 w-6 cursor-pointer md:hidden block"
+                        aria-hidden="true"
+                    />
+                ) : (
+                    <Bars3Icon
+                        className="h-6 w-6 cursor-pointer md:hidden block"
+                        aria-hidden="true"
+                    />
+                )}
+            </button>
+
+            <div
+                className={
+                    isMobileMenuOpen
+                        ? "w-full md:flex md:items-center md:w-auto"
+                        : "hidden w-full md:flex md:items-center md:w-auto"
+                }
+            >
+                <ul className="pt-4 text-base text-gray-700 md:flex md:justify-between md:pt-0">
+                    {navigation.map((item) => (
+                        <li>
                             <NavLink
                                 key={item.name}
                                 to={item.href}
-                                className={
-                                    "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                                className={({ isActive }) =>
+                                    isActive
+                                        ? "md:p-4 py-2 block border-purple-400 border-b-4"
+                                        : "md:p-4 py-2 block hover:text-purple-400"
                                 }
-                                onClick={() => toggleMobileMenu()}
+                                onClick={() => setMobileMenuOpen(false)}
                             >
                                 {item.name}
                             </NavLink>
-                        ))}
-                    </div>
-                </div>
-            )}
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </nav>
     );
 }
