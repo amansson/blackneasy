@@ -28,9 +28,9 @@ const Home = () => {
 
     return (
         <>
-            <div className="bg-gray-200 rounded-2xl">
-                <div className="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
-                    <h1 className="text-5xl antialiased font-semibold leading-none text-center text-slate-700">
+            <div className="shadow-lg rounded-lg grid">
+                <div className="col-span-4">
+                    <h1 className="text-5xl font-semibold text-center text-slate-700">
                         Kimya
                         <BsFillHeartFill
                             className="inline h-12 w-12 ml-2 mb-2"
@@ -42,32 +42,32 @@ const Home = () => {
                     <p className="pt-2 pb-8 text-xl antialiased text-center text-slate-600">
                         Valpar väntas början av Juni (Groenendael / Tervueren)
                     </p>
-                    <div className="flex flex-row justify-between ">
-                        <AdvancedImage
-                            cldImg={cld.image("profile/Kimya_profile_2")}
-                            className="object-cover w-96 rounded-xl"
-                        />
-                        <AdvancedImage
-                            cldImg={cld.image("profile/Dreamboy_profile")}
-                            className="object-cover w-96 rounded-xl"
-                        />
-                    </div>
+                </div>
+                <div className="col-span-2 mb-4 flex">
+                    <AdvancedImage
+                        cldImg={cld.image("profile/Kimya_profile_2")}
+                        className="image w-5/6"
+                    />
+                    <AdvancedImage
+                        cldImg={cld.image("profile/Dreamboy_profile")}
+                        className="image w-5/6"
+                    />
+                </div>
 
-                    <div className="flex flex-row">
-                        {imageData.map((image: ImageDataType) => {
-                            return (
-                                <figure
-                                    key={image.public_id}
-                                    className="rounded-lg p-4 break-inside w-full"
-                                >
-                                    <AdvancedImage
-                                        className="rounded-lg shadow-xl hover:shadow-2xl"
-                                        cldImg={cld.image(image.public_id)}
-                                    />
-                                </figure>
-                            );
-                        })}
-                    </div>
+                <div className="col-span-4 masonry sm:masonry-sm md:masonry-md xl:masonry-xl">
+                    {imageData.map((image: ImageDataType) => {
+                        return (
+                            <div
+                                key={image.public_id}
+                                className="rounded-lg break-inside pb-4"
+                            >
+                                <AdvancedImage
+                                    className="image"
+                                    cldImg={cld.image(image.public_id)}
+                                />
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
             <div className="masonry sm:masonry-sm md:masonry-md xl:masonry-xl">

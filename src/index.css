@@ -2,34 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
-    @variants responsive {
-    .image {
-        @apply object-cover shadow-lg cursor-pointer rounded-lg;
-    }
-        .masonry {
-            column-gap: 1.5em;
-            column-count: 1;
-        }
-        .masonry-sm {
-            column-gap: 1.5em;
-            column-count: 2;
-        }
-        .masonry-md {
-            column-gap: 1.5em;
-            column-count: 3;
-        }
-        .masonry-xl {
-            column-gap: 1.5em;
-            column-count: 4;
-        }
-        .break-inside {
-            break-inside: avoid;
-        }
+@layer base {
+    section {
+        @apply container mx-auto my-10 bg-gray-100;
     }
 }
 
 @layer components {
+    .image {
+        @apply object-cover shadow-lg cursor-pointer rounded-lg;
+    }
+
+    .masonry {
+        @apply columns-1 gap-1;
+    }
+    .masonry-sm {
+        @apply columns-2 gap-2;
+    }
+    .masonry-md {
+        @apply columns-3 gap-3;
+    }
+    .masonry-xl {
+        @apply columns-4 gap-4;
+    }
+    .break-inside {
+        break-inside: avoid;
+    }
+
     .contact-heading {
         @apply text-4xl font-bold text-gray-700 pb-5;
     }
