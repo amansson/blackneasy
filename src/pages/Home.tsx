@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
 import { AdvancedImage } from "@cloudinary/react";
 import { Cloudinary } from "@cloudinary/url-gen";
-import { HeartIcon } from "@heroicons/react/24/solid";
 import { fetchData } from "../utils/fetchData";
 import Loading from "../components/Loading";
+import { ImageDataType } from "../utils/types";
+import { BsFillHeartFill } from "react-icons/bs";
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
@@ -31,7 +32,7 @@ const Home = () => {
                 <div className="container flex flex-col flex-wrap content-center justify-center p-4 py-20 mx-auto md:p-10">
                     <h1 className="text-5xl antialiased font-semibold leading-none text-center text-slate-700">
                         Kimya
-                        <HeartIcon
+                        <BsFillHeartFill
                             className="inline h-12 w-12 ml-2 mb-2"
                             aria-hidden="true"
                             color="red"

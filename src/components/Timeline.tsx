@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { CalendarDaysIcon } from "@heroicons/react/24/outline";
+import { BsCalendarCheck } from "react-icons/bs";
 
 type TimelineProps = {
     name: string;
@@ -12,7 +12,7 @@ const Timeline: FC<TimelineProps> = ({ name, date, description }) => {
         <div className="relative mb-6 sm:mb-0">
             <div className="flex items-center">
                 <div className="z-10 flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full ring-0 ring-white  sm:ring-8 shrink-0">
-                    <CalendarDaysIcon className="h-6 w-6 text-blue-500" />
+                    <BsCalendarCheck className="h-6 w-6 text-blue-500" />
                 </div>
                 <div className="hidden sm:flex w-full bg-gray-200 h-0.5"></div>
             </div>

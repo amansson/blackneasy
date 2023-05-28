@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 import { AdvancedImage } from "@cloudinary/react";
 import { CloudinaryImage } from "@cloudinary/url-gen";
-import { XMarkIcon } from "@heroicons/react/24/outline";
+import { ImCross } from "react-icons/im";
 
 type ImageModalProps = {
     imageUrl: string;
@@ -30,7 +30,7 @@ const ImageModal: FC<ImageModalProps> = ({ imageUrl, onClose }) => {
                     }
                 />
                 <div className="absolute top-2 right-2 m-4">
-                    <XMarkIcon
+                    <ImCross
                         className="h-8 w-8 bg-black text-white flex items-center justify-center cursor-pointer"
                         aria-hidden="true"
                         onClick={onClose}

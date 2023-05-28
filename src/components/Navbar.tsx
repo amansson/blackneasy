@@ -1,6 +1,10 @@
 import { NavLink } from "react-router-dom";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import { FaFacebookF } from "react-icons/fa";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { ImCross } from "react-icons/im";
 
 const navigation = [
     { name: "Home", href: "/" },
@@ -21,6 +25,17 @@ export default function Example() {
     };
 
     return (
+            <div className="bg-neutral-900 text-white h-8 px-8 flex justify-between">
+                <div className="flex">
+                    <BsFillTelephoneFill
+                        className={"mt-2 ml-2 text-gray-500"}
+                    />
+                    <span className="pt-1.5 pl-3 text-sm">0706-170833</span>
+                </div>
+                <div className=" bg-gray-600 w-8">
+                    <FaFacebookF className={"mt-2 ml-2"} />
+                </div>
+            </div>
         <nav className="flex flex-wrap items-center justify-between w-full py-4 md:py-0 px-4 text-lg text-gray-700bg-white">
             <div className="flex">
                 <img
@@ -42,13 +57,13 @@ export default function Example() {
                 onClick={toggleMobileMenu}
             >
                 {isMobileMenuOpen ? (
-                    <XMarkIcon
-                        className="h-6 w-6 cursor-pointer md:hidden block"
+                        <ImCross
+                            className="h-6 w-6 cursor-pointer lg:hidden block"
                         aria-hidden="true"
                     />
                 ) : (
-                    <Bars3Icon
-                        className="h-6 w-6 cursor-pointer md:hidden block"
+                        <GiHamburgerMenu
+                            className="h-6 w-6 cursor-pointer lg:hidden block"
                         aria-hidden="true"
                     />
                 )}
