@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import LitterCard from "../components/LitterCard";
 import LitterMom from "../components/LitterMom";
 import Loading from "../components/Loading";
+import { ImageDataType } from "../utils/types";
 
 type LitterMotherType = {
     [key: string]: string[];
@@ -114,7 +115,7 @@ const Litter = () => {
                         Kastor och Easy
                     </h1>
                     <div className="flex flex-row flex-wrap-reverse justify-center mt-24">
-                        {imageData.map((image: any) => {
+                        {imageData.map((image: ImageDataType) => {
                             return (
                                 <LitterCard
                                     key={image.public_id}

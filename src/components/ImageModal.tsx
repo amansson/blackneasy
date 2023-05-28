@@ -22,7 +22,7 @@ const ImageModal: FC<ImageModalProps> = ({ imageUrl, onClose }) => {
         >
             <div className="relative p-4 bg-white rounded-xl">
                 <AdvancedImage
-                    className="lg:max-w-4xl mx-auto h-auto rounded-lg"
+                    className="image lg:max-w-4xl mx-auto h-auto rounded-lg"
                     cldImg={
                         new CloudinaryImage(imageUrl, {
                             cloudName: "blackneasy",

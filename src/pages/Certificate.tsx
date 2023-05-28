@@ -2,6 +2,7 @@ import { AdvancedImage } from "@cloudinary/react";
 import { CloudinaryImage } from "@cloudinary/url-gen";
 import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
+import { ImageDataType } from "../utils/types";
 
 const Certificate = () => {
     const [categories, setCategories] = useState<string[]>([]);
@@ -100,14 +101,14 @@ const Certificate = () => {
                 </button>
             </div>
             <div className="columns-4">
-                {filteredData.map((image: any) => {
+                {filteredData.map((image: ImageDataType) => {
                     return (
                         <figure
                             key={image.public_id}
                             className="rounded-lg p-4 break-inside"
                         >
                             <AdvancedImage
-                                className="rounded-lg shadow-xl hover:shadow-2xl"
+                                className="image"
                                 cldImg={
                                     new CloudinaryImage(image.public_id, {
                                         cloudName: "blackneasy",

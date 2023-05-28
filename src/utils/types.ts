@@ -7,6 +7,7 @@ export type ImageDataType = {
             location: string;
             Category: string;
             breed: string;
+            type: string;
         };
     };
 };

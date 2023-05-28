@@ -4,6 +4,9 @@
 
 @layer utilities {
     @variants responsive {
+    .image {
+        @apply object-cover shadow-lg cursor-pointer rounded-lg;
+    }
         .masonry {
             column-gap: 1.5em;
             column-count: 1;

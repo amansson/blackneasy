@@ -36,7 +36,7 @@ const PhotoCollage = () => {
                         className="rounded-lg p-4 break-inside"
                     >
                         <AdvancedImage
-                            className="h-auto max-w-full rounded-lg shadow-md cursor-pointer"
+                            className="image"
                             cldImg={
                                 new CloudinaryImage(image.public_id, {
                                     cloudName: "blackneasy",

@@ -3,6 +3,7 @@ import { AdvancedImage } from "@cloudinary/react";
 import { CloudinaryImage } from "@cloudinary/url-gen";
 import { fetchData } from "../utils/fetchData";
 import Loading from "./Loading";
+import { ImageDataType } from "../utils/types";
 
 type puppyProps = {
     puppy: string;
@@ -29,7 +30,7 @@ const PuppyContent: FC<puppyProps> = ({ puppy }): ReactElement => {
                         className="rounded-lg p-4 break-inside"
                     >
                         <AdvancedImage
-                            className="h-auto max-w-full rounded-lg shadow-md"
+                            className="image"
                             cldImg={
                                 new CloudinaryImage(image.public_id, {
                                     cloudName: "blackneasy",
