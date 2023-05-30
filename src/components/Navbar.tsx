@@ -36,67 +36,75 @@ export default function Example() {
                     <FaFacebookF className={"mt-2 ml-2"} />
                 </div>
             </div>
-            <nav className="flex flex-wrap items-center justify-between w-full h-20 px-4 p-0 m-0 text-neutral-900 bg-white shadow-md uppercase font-serif">
-                <div className="flex">
-                    <img
-                        className="block h-12 w-auto md:hidden"
-                        src="./assets/logo.png"
-                        alt="Your Company"
-                    />
-                    <img
-                        className="hidden h-12 w-auto md:block"
-                        src="./assets/logo.png"
-                        alt="Your Company"
-                    />
-                    <h2 className="font-bold pt-4 md:pt-3 lg:pt-2 pl-2 lg:text-2xl md:text-lg sm:text-md">
-                        Black and Easy
-                    </h2>
-                </div>
-
-                <button
-                    type="button"
-                    className="pt-4 text-base text-gray-700 lg:flex:justify-between:pt-0"
-                    onClick={toggleMobileMenu}
-                >
-                    {isMobileMenuOpen ? (
-                        <ImCross
-                            className="h-6 w-6 cursor-pointer lg:hidden block"
-                            aria-hidden="true"
-                        />
-                    ) : (
-                        <GiHamburgerMenu
-                            className="h-6 w-6 cursor-pointer lg:hidden block"
-                            aria-hidden="true"
-                        />
-                    )}
-                </button>
-
-                <div
-                    className={
-                        isMobileMenuOpen
-                            ? "w-full lg:flex lg:items-center lg:w-auto z-50"
-                            : "hidden w-full lg:flex lg:items-center lg:w-auto"
-                    }
-                >
-                    <ul className="text-gray-700 md:flex md:justify-between bg-white text-md font-light">
-                        {navigation.map((item) => (
-                            <NavLink
-                                key={item.name}
-                                to={item.href}
-                                className={({ isActive }) =>
-                                    isActive
-                                        ? "bg-amber-300 text-white"
-                                        : "hover:bg-amber-300 text-neutral-900"
-                                }
-                                onClick={() => setMobileMenuOpen(false)}
+            <nav className="bg-gray-800 uppercase">
+                <div className="mx-auto px-4 lg:px-6">
+                    <div className="relative flex h-16 items-center justify-between">
+                        <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
+                            <button
+                                type="button"
+                                className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                                onClick={toggleMobileMenu}
                             >
-                                <li className="m-0 h-20 px-2 hover:bg-amber-300 pt-7">
-                                    {item.name}
-                                </li>
-                            </NavLink>
-                        ))}
-                    </ul>
+                                {isMobileMenuOpen ? (
+                                    <ImCross
+                                        className="block h-6 w-6"
+                                        aria-hidden="true"
+                                    />
+                                ) : (
+                                    <GiHamburgerMenu
+                                        className="block h-6 w-6"
+                                        aria-hidden="true"
+                                    />
+                                )}
+                            </button>
+                        </div>
+                        <div className="flex flex-1 items-center justify-center md:justify-between md:items-stretch">
+                            <div className="flex flex-shrink-0 items-center">
+                                <img
+                                    className="block h-8 w-auto"
+                                    src="./assets/logo.png"
+                                    alt="Your Company"
+                                />
+                                <h2 className="text-white">Black and Easy</h2>
+                            </div>
+                            <div className="hidden sm:ml-6 md:block">
+                                <div className="flex space-x-4">
+                                    {navigation.map((item) => (
+                                        <NavLink
+                                            key={item.name}
+                                            to={item.href}
+                                            className={({ isActive }) =>
+                                                isActive
+                                                    ? "bg-gray-700 text-white p-2 rounded-xl"
+                                                    : "text-gray-300 hover:bg-gray-500 hover:text-white p-2 rounded-xl font-medium line"
+                                            }
+                                        >
+                                            {item.name}
+                                        </NavLink>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+                {isMobileMenuOpen && (
+                    <div className="md:hidden">
+                        <div className="px-2 pt-2 pb-3 space-y-1">
+                            {navigation.map((item) => (
+                                <NavLink
+                                    key={item.name}
+                                    to={item.href}
+                                    className={
+                                        "block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
+                                    }
+                                    onClick={() => toggleMobileMenu()}
+                                >
+                                    {item.name}
+                                </NavLink>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </nav>
         </>
     );
