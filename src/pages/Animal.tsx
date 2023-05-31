@@ -17,7 +17,7 @@ const Animal = () => {
     }
 
     return (
-        <div className="flex flex-wrap gap-4">
+        <section className="mt-5 mx-2 grid gap-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             {imageData.map((image) => {
                 return (
                     <AnimalCard
@@ -28,7 +28,7 @@ const Animal = () => {
                     />
                 );
             })}
-        </div>
+        </section>
     );
 };
 

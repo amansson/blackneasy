@@ -18,9 +18,7 @@ export const NavbarWrapper = () => {
     return (
         <>
             <Navbar />
-            <div className="my-10">
-                <Outlet />
-            </div>
+            <Outlet />
         </>
     );
 };

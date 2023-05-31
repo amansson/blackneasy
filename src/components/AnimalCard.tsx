@@ -16,7 +16,7 @@ const AnimalCard: FC<AnimalProps> = ({ name, ras, image }): ReactElement => {
     });
 
     return (
-        <div className="max-w-xs rounded-md shadow-md">
+        <div className="rounded-md shadow-md">
             <AdvancedImage
                 cldImg={cld.image(image)}
                 className="object-cover object-center w-full rounded-t-md h-72"
