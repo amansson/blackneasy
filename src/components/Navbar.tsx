@@ -39,7 +39,7 @@ export default function Example() {
             <nav className="bg-gray-800 uppercase">
                 <div className="mx-auto px-4 lg:px-6">
                     <div className="relative flex h-16 items-center justify-between">
-                        <div className="absolute inset-y-0 left-0 flex items-center md:hidden">
+                        <div className="absolute inset-y-0 left-0 flex items-center lg:hidden">
                             <button
                                 type="button"
                                 className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -58,7 +58,7 @@ export default function Example() {
                                 )}
                             </button>
                         </div>
-                        <div className="flex flex-1 items-center justify-center md:justify-between md:items-stretch">
+                        <div className="flex flex-1 items-center justify-center lg:justify-between lg:items-stretch">
                             <div className="flex flex-shrink-0 items-center">
                                 <img
                                     className="block h-8 w-auto"
@@ -67,8 +67,8 @@ export default function Example() {
                                 />
                                 <h2 className="text-white">Black and Easy</h2>
                             </div>
-                            <div className="hidden sm:ml-6 md:block">
-                                <div className="flex space-x-4">
+                            <div className="hidden sm:ml-6 lg:block">
+                                <div className="flex space-x-4 text-sm">
                                     {navigation.map((item) => (
                                         <NavLink
                                             key={item.name}
@@ -76,7 +76,7 @@ export default function Example() {
                                             className={({ isActive }) =>
                                                 isActive
                                                     ? "bg-gray-700 text-white p-2 rounded-xl"
-                                                    : "text-gray-300 hover:bg-gray-500 hover:text-white p-2 rounded-xl font-medium line"
+                                                    : "text-gray-300 hover:bg-gray-500 hover:text-white p-2 rounded-xl"
                                             }
                                         >
                                             {item.name}
@@ -88,7 +88,7 @@ export default function Example() {
                     </div>
                 </div>
                 {isMobileMenuOpen && (
-                    <div className="md:hidden">
+                    <div className="lg:hidden">
                         <div className="px-2 pt-2 pb-3 space-y-1">
                             {navigation.map((item) => (
                                 <NavLink
