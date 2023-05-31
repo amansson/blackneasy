@@ -18,7 +18,7 @@ export const NavbarWrapper = () => {
     return (
         <>
             <Navbar />
-            <div className="container mx-auto my-10">
+            <div className="my-10">
                 <Outlet />
             </div>
         </>
