@@ -53,8 +53,8 @@ const Certificate = () => {
     }
 
     return (
-        <>
-            <div className="flex items-center justify-center py-4 md:py-8 flex-wrap">
+        <section className="mt-5">
+            <div className="flex items-center justify-center">
                 <button
                     onClick={() => setCategories([])}
                     type="button"
@@ -100,41 +100,41 @@ const Certificate = () => {
                     Black and Easy
                 </button>
             </div>
-            <div className="columns-4">
+            <div className="mx-2 columns-2 gap-2 md:columns-3 md:gap-3 lg:columns-4 lg:gap-4">
                 {filteredData.map((image: ImageDataType) => {
                     return (
-                        <figure
+                        <div
                             key={image.public_id}
-                            className="rounded-lg p-4 break-inside"
+                            className="rounded-lg mb-2 overflow-hidden relative"
                         >
-                            <AdvancedImage
-                                className="image"
-                                cldImg={
-                                    new CloudinaryImage(image.public_id, {
-                                        cloudName: "blackneasy",
-                                    })
-                                }
-                            />
-                            <figcaption className="text-lg -mt-16 text-white px-4">
-                                <div className="flex justify-between">
-                                    <div>
-                                        <h1>{image.context.custom.caption}</h1>
-                                    </div>
-                                    <div className="flex justify-around">
-                                        <div className=" text-gray-900 border border-white hover:border-gray-200 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-3xl text-base font-medium px-5 py-2.5 text-center mr-3 mb-3">
+                            <div className="bg-black/75">
+                                <AdvancedImage
+                                    className="image object-cover aspect-video mix-blend-overlay"
+                                    cldImg={
+                                        new CloudinaryImage(image.public_id, {
+                                            cloudName: "blackneasy",
+                                        })
+                                    }
+                                />
+                                <div className="absolute inset-0 flex flex-col justify-center items-center">
+                                    <h1 className="text-center text-white text-2xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:font-medium">
+                                        {image.context.custom.caption}
+                                    </h1>
+                                    <div className="absolute bottom-0 left-0 w-full flex justify-center mb-3">
+                                        <span className="bg-gray-800 text-gray-200 text-xs font-medium mr-3 px-2.5 py-0.5 rounded md:text-base md:font-normal">
                                             {image.context.custom.Category}
-                                        </div>
-                                        <div className=" text-gray-900 border border-white hover:border-gray-200 bg-white focus:ring-4 focus:outline-none focus:ring-gray-300 rounded-3xl text-base font-medium px-5 py-2.5 text-center mr-3 mb-3">
+                                        </span>
+                                        <span className="bg-violet-100 text-violet-800 text-xs font-medium px-2.5 py-0.5 rounded md:text-base md:font-normal">
                                             {image.context.custom.type}
-                                        </div>
+                                        </span>
                                     </div>
                                 </div>
-                            </figcaption>
-                        </figure>
+                            </div>
+                        </div>
                     );
                 })}
             </div>
-        </>
+        </section>
     );
 };
 
