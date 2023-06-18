@@ -30,35 +30,35 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             {
-                path: "/",
+                path: "/blackneasy/",
                 element: <Home />,
             },
             {
-                path: "animal",
+                path: "/blackneasy/animal",
                 element: <Animal />,
             },
             {
-                path: "photo",
+                path: "/blackneasy/photo",
                 element: <Photo />,
             },
             {
-                path: "about",
+                path: "/blackneasy/about",
                 element: <About />,
             },
             {
-                path: "meetup",
+                path: "/blackneasy/meetup",
                 element: <Meetup />,
             },
             {
-                path: "puppy",
+                path: "/blackneasy/puppy",
                 element: <Puppy />,
             },
             {
-                path: "certificate",
+                path: "/blackneasy/certificate",
                 element: <Certificate />,
             },
             {
-                path: "litter",
+                path: "/blackneasy/litter",
                 element: <Litter />,
             },
         ],

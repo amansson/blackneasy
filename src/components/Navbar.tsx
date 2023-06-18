@@ -6,14 +6,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { ImCross } from "react-icons/im";
 
 const navigation = [
-    { name: "Home", href: "/" },
-    { name: "Djur", href: "/animal" },
-    { name: "MH och HD", href: "/certificate" },
-    { name: "Valpar", href: "/puppy" },
-    { name: "Kullar", href: "/litter" },
-    { name: "Om mig", href: "/about" },
-    { name: "Foto", href: "/photo" },
-    { name: "Kennel träff", href: "/meetup" },
+    { name: "Home", href: "/blackneasy/" },
+    { name: "Djur", href: "/blackneasy/animal" },
+    { name: "MH och HD", href: "/blackneasy/certificate" },
+    { name: "Valpar", href: "/blackneasy/puppy" },
+    { name: "Kullar", href: "/blackneasy/litter" },
+    { name: "Om mig", href: "/blackneasy/about" },
+    { name: "Foto", href: "/blackneasy/photo" },
+    { name: "Kennel träff", href: "/blackneasy/meetup" },
 ];
 
 export default function Example() {
@@ -22,6 +22,10 @@ export default function Example() {
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
     };
+
+    function getImageUrl() {
+        return new URL("../../assets/logo.png", import.meta.url).href;
+    }
 
     return (
         <>
@@ -62,8 +66,8 @@ export default function Example() {
                             <div className="flex flex-shrink-0 items-center">
                                 <img
                                     className="block h-8 w-auto"
-                                    src="./assets/logo.png"
-                                    alt="Your Company"
+                                    src={getImageUrl()}
+                                    alt="Dog"
                                 />
                                 <h2 className="text-white">Black and Easy</h2>
                             </div>
