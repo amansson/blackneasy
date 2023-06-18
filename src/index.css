@@ -31,11 +31,11 @@
     }
 
     .tab-button {
-        @apply inline-block p-4 rounded-t-lg hover:text-gray-600 hover:bg-gray-50 cursor-pointer;
+        @apply bg-gray-50 inline-block p-4 rounded-t-lg hover:text-white hover:bg-gray-700 cursor-pointer;
     }
 
     .tab-button-active {
-        @apply text-blue-600 bg-gray-100 cursor-pointer;
+        @apply bg-gray-700 text-white cursor-pointer;
     }
 
     .category-button {

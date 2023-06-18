@@ -5,14 +5,14 @@ const Meetup = () => {
     const [tabContent, setTabContent] = useState<string>("meetup1");
 
     return (
-        <>
-            <ul className="flex flex-wrap text-sm font-medium text-center text-gray-500 border-b border-gray-200">
+        <section className="mx-5">
+            <ul className="flex flex-wrap mt-5 font-medium text-center text-gray-500 border-b border-gray-200">
                 <li className="mr-2">
                     <a
                         onClick={() => setTabContent("meetup1")}
                         aria-current="page"
                         className={`tab-button ${
-                            tabContent === "meetup1" && "tabButton-active"
+                            tabContent === "meetup1" && "tab-button-active"
                         }`}
                     >
                         Träff 1
@@ -49,7 +49,7 @@ const Meetup = () => {
                     </a>
                 </li>
             </ul>
-            <div className="cards-meetup">
+            <div>
                 {tabContent === "meetup1" ? (
                     <MeetupContent meetup={"meetup1"} />
                 ) : (
@@ -71,7 +71,7 @@ const Meetup = () => {
                     ""
                 )}
             </div>
-        </>
+        </section>
     );
 };
 
