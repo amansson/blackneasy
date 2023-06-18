@@ -46,7 +46,9 @@ const litterMoms = [
 const Litter = () => {
     const [loading, setLoading] = useState(true);
     const [imageData, setImageData] = useState<ImageDataType[]>([]);
-    const [litterMother, setLitterMother] = useState<string[]>([""]);
+    const [litterMother, setLitterMother] = useState<string[]>(
+        littersMotherData[0].easy
+    );
 
     useEffect(() => {
         fetchData(setImageData, setLoading, litterMother);
@@ -70,7 +72,7 @@ const Litter = () => {
 
     return (
         <>
-            <section className="container flex flex-col-4 justify-betweem">
+            <section className="flex flex-wrap gap-4 justify-center mt-5">
                 {litterMoms.map(({ name, race, image, mother }) => (
                     <LitterMom
                         key={mother}
@@ -83,27 +85,27 @@ const Litter = () => {
                 ))}
             </section>
 
-            <section className="">
-                <div className="container flex flex-col items-center justify-center p-4 sm:p-10">
+            <section>
+                <div className="flex flex-col items-center justify-center p-4">
                     <p className="p-2 text-sm font-medium tracking-wider text-center uppercase">
                         Kullar
                     </p>
-                    <h1 className="text-4xl font-bold leading-none text-center sm:text-5xl">
+                    <h1 className="text-4xl font-bold leading-none text-center">
                         Kastor och Easy
                     </h1>
-                    <div className="flex flex-row flex-wrap-reverse justify-center mt-24">
-                        {imageData.map((image: ImageDataType) => {
-                            return (
-                                <LitterCard
-                                    key={image.public_id}
-                                    name={image.context.custom.caption}
-                                    gender={image.context.custom.gender}
-                                    placement={image.context.custom.location}
-                                    image={image.public_id}
-                                />
-                            );
-                        })}
-                    </div>
+                </div>
+                <div className="mt-6 mx-4 grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 lg:gap-4">
+                    {imageData.map((image: ImageDataType) => {
+                        return (
+                            <LitterCard
+                                key={image.public_id}
+                                name={image.context.custom.caption}
+                                gender={image.context.custom.gender}
+                                placement={image.context.custom.location}
+                                image={image.public_id}
+                            />
+                        );
+                    })}
                 </div>
             </section>
         </>

@@ -16,20 +16,24 @@ const LitterCard: FC<LitterCardProps> = ({
     image,
 }) => {
     return (
-        <div className="flex flex-col justify-center w-full px-8 mx-6 my-12 text-center rounded-md md:w-96 lg:w-80 xl:w-64 bg-gray-100 text-gray-800">
+        <div className="rounded-md shadow-md mb-4">
             <AdvancedImage
-                className="self-center flex-shrink-0 -mt-24 bg-center bg-cover rounded-full bg-gray-500"
                 cldImg={
                     new CloudinaryImage(image, {
                         cloudName: "blackneasy",
                     })
                 }
+                className="rounded-t-lg"
             />
 
-            <div className="flex-1 my-4">
-                <p className="text-xl font-semibold leading-snug">{name}</p>
-                <p>{gender}</p>
-                <p>{placement}</p>
+            <div className="flex flex-col justify-between p-6 space-y-8">
+                <div className="space-y-2">
+                    <h2 className="text-3xl font-semibold tracking-wide">
+                        {name}
+                    </h2>
+                    <p className="uppercase font-semibold">{gender}</p>
+                    <p>{placement}</p>
+                </div>
             </div>
         </div>
     );
