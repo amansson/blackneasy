@@ -45,4 +45,12 @@
     .category-button-active {
         @apply bg-gray-700 text-white hover:bg-gray-700;
     }
+
+    .button {
+        @apply text-gray-900 bg-white text-base font-medium px-5 py-2.5 text-center border border-gray-200 hover:bg-gray-700 hover:text-white;
+    }
+
+    .button-action {
+        @apply bg-gray-700 text-white;
+    }
 }

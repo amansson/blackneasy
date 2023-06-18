@@ -7,55 +7,13 @@ const Puppy = () => {
         "puppies_easy_kastor_1"
     );
 
+    const onSelect = (item: string) => {
+        setPuppySelect(item);
+    };
+
     return (
-        <>
-            <div className="items-center sm:flex my-10 ml-5">
-                <div
-                    className="cursor-pointer"
-                    onClick={() => setPuppySelect("puppies_easy_kastor_1")}
-                >
-                    <Timeline
-                        name={"Easy och Kastor"}
-                        date={"20 November 2015"}
-                    />
-                </div>
-                <div
-                    className="cursor-pointer"
-                    onClick={() => setPuppySelect("puppies_vimsa_zkrutt")}
-                >
-                    <Timeline name={"Vimsa och Zkrutt"} date={"2016-01-12"} />
-                </div>
-                <div
-                    className="cursor-pointer"
-                    onClick={() => setPuppySelect("puppies_shantis_zkrutt")}
-                >
-                    <Timeline name={"Shantis och Zkrutt"} date={"2016-01-12"} />
-                </div>
-                <div
-                    className="cursor-pointer"
-                    onClick={() => setPuppySelect("puppies_vimsa_kazan")}
-                >
-                    <Timeline name={"Vimsa och Kazan"} date={"2016-01-12"} />
-                </div>
-                <div
-                    className="cursor-pointer"
-                    onClick={() => setPuppySelect("puppies_tiffy")}
-                >
-                    <Timeline name={"Tiffy och Hane"} date={"2016-01-12"} />
-                </div>
-                <div
-                    className="cursor-pointer"
-                    onClick={() => setPuppySelect("puppies_jixie_proffen")}
-                >
-                    <Timeline name={"Jixie och Proffen"} date={"2016-01-12"} />
-                </div>
-                <div
-                    className="cursor-pointer"
-                    onClick={() => setPuppySelect("puppies_shantis_kazan")}
-                >
-                    <Timeline name={"Shantis och Kazan"} date={"2016-01-12"} />
-                </div>
-            </div>
+        <section className="mt-5">
+            <Timeline select={onSelect} />
 
             {puppySelect === "puppies_easy_kastor_1" ? (
                 <PuppyContent puppy={"puppies_easy_kastor_1"} />
@@ -92,7 +50,7 @@ const Puppy = () => {
             ) : (
                 ""
             )}
-        </>
+        </section>
     );
 };
 
