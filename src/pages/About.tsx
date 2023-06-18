@@ -12,8 +12,8 @@ const About = () => {
     const diplom = cld.image("diplom");
 
     return (
-        <div className="bg-stone-100 row-span-2">
-            <div className="columns-2 pb-10">
+        <section className="bg-stone-100 row-span-2 mx-auto max-w-7xl">
+            <div className="columns-1 md:columns-2 pb-10">
                 <div className="p-5">
                     <h2 className="contact-heading">Marie-Louise Månsson</h2>
                     <p className="contact-paragraph">
@@ -50,12 +50,12 @@ const About = () => {
                     <AdvancedImage cldImg={profile} className="object-fill" />
                 </div>
             </div>
-            <div className="columns-2">
+            <div className="columns-1 md:columns-2">
                 <div>
                     <AdvancedImage cldImg={diplom} />
                 </div>
-                <div>
-                    <h2 className="contact-heading">
+                <div className="p-5">
+                    <h2 className="contact-heading mt-4">
                         Målet med min uppfödning
                     </h2>
                     <p className="contact-paragraph">
@@ -68,23 +68,23 @@ const About = () => {
                     <h3 className="text-xl py-2  text-center">2015-2016</h3>
                     <blockquote className="p-4 my-4 border-l-4 border-gray-300 bg-gray-50 ">
                         <p className="text-xl italic font-medium leading-relaxed text-gray-600">
-                            Hunduppfödarutbildning del 1 – 2 – 3
+                            Hunduppfödar-utbildning del 1 – 2 – 3
                         </p>
                     </blockquote>
                     <blockquote className="p-4 my-4 border-l-4 border-gray-300 bg-gray-50">
                         <p className="text-xl italic font-medium leading-relaxed text-gray-600">
-                            Hunduppfödarutbildning del 1 – 2 – 3
+                            Hunduppfödar-utbildning del 1 – 2 – 3
                         </p>
                     </blockquote>
                     <h3 className="text-xl py-2  text-center">2017</h3>
                     <blockquote className="p-4 my-4 border-l-4 border-gray-300 bg-gray-50">
                         <p className="text-xl italic font-medium leading-relaxed text-gray-600">
-                            Nya Hunduppfödarutbildningen, se bild
+                            Nya Hunduppfödar-utbildningen, se bild
                         </p>
                     </blockquote>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

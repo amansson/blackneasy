@@ -43,7 +43,9 @@ const Home = () => {
                 nameFather={"Dreamboy"}
                 imageMother={"profile/Kimya_profile_2"}
                 imageFather={"profile/Dreamboy_profile"}
-                text={"Valpar väntas början av Juni (Groenendael / Tervueren)"}
+                text={
+                    "12 Juni föddes valparna - 3 hannar och 2 tikar (Groenendael / Tervueren)"
+                }
                 images={imageData}
             />
 
