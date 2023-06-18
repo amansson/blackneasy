@@ -1,6 +1,10 @@
 import { FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
+    function getImageUrl() {
+        return new URL("../../assets/logo.png", import.meta.url).href;
+    }
+
     return (
         <div className="pt-16 mx-auto">
             <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4 px-16">
@@ -13,7 +17,7 @@ const Footer = () => {
                     >
                         <img
                             className="block h-8 w-auto"
-                            src="./assets/logo.png"
+                            src={getImageUrl()}
                             alt="Your Company"
                         />
                         <span className="ml-2 text-xl font-bold tracking-wide text-gray-800 uppercase">
