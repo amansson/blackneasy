@@ -1,8 +1,9 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { BsFillHeartFill } from "react-icons/bs";
 import { AdvancedImage } from "@cloudinary/react";
 import { Cloudinary } from "@cloudinary/url-gen";
 import { ImageDataType } from "../utils/types";
+import ImageModal from "./ImageModal";
 
 type heroProps = {
     nameMother: string;
@@ -21,6 +22,15 @@ const HeroPuppy: FC<heroProps> = ({
     text,
     images,
 }) => {
+    const [selectedImage, setSelectedImage] = useState("");
+    const openModal = (imageUrl: string) => {
+        setSelectedImage(imageUrl);
+    };
+
+    const closeModal = () => {
+        setSelectedImage("");
+    };
+
     const cld = new Cloudinary({
         cloud: {
             cloudName: "blackneasy",
@@ -78,7 +88,16 @@ const HeroPuppy: FC<heroProps> = ({
                                         <AdvancedImage
                                             className="image mb-2 md:mb-3"
                                             cldImg={cld.image(image.public_id)}
+                                            onClick={() =>
+                                                openModal(image.public_id)
+                                            }
                                         />
+                                        {selectedImage && (
+                                            <ImageModal
+                                                imageUrl={selectedImage}
+                                                onClose={closeModal}
+                                            />
+                                        )}
                                     </div>
                                 );
                             })}

@@ -1,6 +1,7 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import { AdvancedImage } from "@cloudinary/react";
 import { CloudinaryImage } from "@cloudinary/url-gen";
+import ImageModal from "./ImageModal";
 
 type LitterCardProps = {
     name: string;
@@ -15,6 +16,16 @@ const LitterCard: FC<LitterCardProps> = ({
     placement,
     image,
 }) => {
+    const [selectedImage, setSelectedImage] = useState("");
+
+    const openModal = (imageUrl: string) => {
+        setSelectedImage(imageUrl);
+    };
+
+    const closeModal = () => {
+        setSelectedImage("");
+    };
+
     return (
         <div className="rounded-md shadow-md mb-4">
             <AdvancedImage
@@ -23,8 +34,12 @@ const LitterCard: FC<LitterCardProps> = ({
                         cloudName: "blackneasy",
                     })
                 }
-                className="rounded-t-lg"
+                className="rounded-t-lg cursor-pointer"
+                onClick={() => openModal(image)}
             />
+            {selectedImage && (
+                <ImageModal imageUrl={selectedImage} onClose={closeModal} />
+            )}
 
             <div className="flex flex-col justify-between p-6 space-y-8">
                 <div className="space-y-2">

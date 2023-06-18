@@ -4,6 +4,7 @@ import { CloudinaryImage } from "@cloudinary/url-gen";
 import { fetchData } from "../utils/fetchData";
 import Loading from "./Loading";
 import { ImageDataType } from "../utils/types";
+import ImageModal from "./ImageModal";
 
 type puppyProps = {
     puppy: string;
@@ -12,6 +13,15 @@ type puppyProps = {
 const PuppyContent: FC<puppyProps> = ({ puppy }): ReactElement => {
     const [loading, setLoading] = useState(true);
     const [imageData, setImageData] = useState<ImageDataType[]>([]);
+    const [selectedImage, setSelectedImage] = useState("");
+
+    const openModal = (imageUrl: string) => {
+        setSelectedImage(imageUrl);
+    };
+
+    const closeModal = () => {
+        setSelectedImage("");
+    };
 
     useEffect(() => {
         fetchData(setImageData, setLoading, puppy);
@@ -36,7 +46,14 @@ const PuppyContent: FC<puppyProps> = ({ puppy }): ReactElement => {
                                     cloudName: "blackneasy",
                                 })
                             }
+                            onClick={() => openModal(image.public_id)}
                         />
+                        {selectedImage && (
+                            <ImageModal
+                                imageUrl={selectedImage}
+                                onClose={closeModal}
+                            />
+                        )}
                     </div>
                 );
             })}

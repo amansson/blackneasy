@@ -4,11 +4,21 @@ import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import { ImageDataType } from "../utils/types";
 import { fetchData } from "../utils/fetchData";
+import ImageModal from "../components/ImageModal";
 
 const Certificate = () => {
     const [categories, setCategories] = useState<string[]>([]);
     const [certificateData, setCertificateData] = useState<ImageDataType[]>([]);
     const [loading, setLoading] = useState(true);
+    const [selectedImage, setSelectedImage] = useState("");
+
+    const openModal = (imageUrl: string) => {
+        setSelectedImage(imageUrl);
+    };
+
+    const closeModal = () => {
+        setSelectedImage("");
+    };
 
     useEffect(() => {
         fetchData(setCertificateData, setLoading, "certificate");
@@ -103,7 +113,16 @@ const Certificate = () => {
                                         })
                                     }
                                 />
-                                <div className="absolute inset-0 flex flex-col justify-center items-center">
+                                {selectedImage && (
+                                    <ImageModal
+                                        imageUrl={selectedImage}
+                                        onClose={closeModal}
+                                    />
+                                )}
+                                <div
+                                    className="absolute inset-0 flex flex-col justify-center items-center cursor-pointer"
+                                    onClick={() => openModal(image.public_id)}
+                                >
                                     <h1 className="text-center text-white text-2xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 lg:font-medium">
                                         {image.context.custom.caption}
                                     </h1>
