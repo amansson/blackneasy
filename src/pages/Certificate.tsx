@@ -3,33 +3,20 @@ import { CloudinaryImage } from "@cloudinary/url-gen";
 import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 import { ImageDataType } from "../utils/types";
+import { fetchData } from "../utils/fetchData";
 
 const Certificate = () => {
     const [categories, setCategories] = useState<string[]>([]);
     const [certificateData, setCertificateData] = useState<ImageDataType[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
-
-    const fetchImageData = async () => {
-        try {
-            const response = await fetch(
-                "https://res.cloudinary.com/blackneasy/image/list/certificate.json"
-            );
-            const data = await response.json();
-            if (response.ok) {
-                setCertificateData(data.resources);
-            } else {
-                console.error("Failed to fetch image data:", data);
-            }
-        } catch (error) {
-            console.error("Error fetching image data:", error);
-        } finally {
-            setLoading(false);
-        }
-    };
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetchImageData();
+        fetchData(setCertificateData, setLoading, "certificate");
     }, []);
+
+    if (loading) {
+        return <Loading />;
+    }
 
     const handleToggleCategory = (category: string) => {
         if (categories.includes(category)) {

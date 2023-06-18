@@ -3,6 +3,7 @@ import LitterCard from "../components/LitterCard";
 import LitterMom from "../components/LitterMom";
 import Loading from "../components/Loading";
 import { ImageDataType } from "../utils/types";
+import { fetchData } from "../utils/fetchData";
 
 type LitterMotherType = {
     [key: string]: string[];
@@ -43,37 +44,17 @@ const litterMoms = [
 ];
 
 const Litter = () => {
-    const [loading, setLoading] = useState<boolean>(true);
+    const [loading, setLoading] = useState(true);
     const [imageData, setImageData] = useState<ImageDataType[]>([]);
-    const [litterMother, setLitterMother] = useState<string[]>([]);
+    const [litterMother, setLitterMother] = useState<string[]>([""]);
 
-    const fetchImageData = async (litter: string[]) => {
-        try {
-            const promises = litter.map(async (entry) => {
-                const response = await fetch(
-                    `https://res.cloudinary.com/blackneasy/image/list/${entry}.json`
-                );
-                const data = await response.json();
-                if (response.ok) {
-                    return data.resources;
-                } else {
-                    console.error("Failed to fetch image data:", data);
-                    return [];
-                }
-            });
+    useEffect(() => {
+        fetchData(setImageData, setLoading, litterMother);
+    }, [litterMother]);
 
-            const imageData = await Promise.all(promises);
-            const combinedData = imageData.reduce(
-                (acc, curr) => acc.concat(curr),
-                []
-            );
-            setImageData(combinedData);
-        } catch (error) {
-            console.error("Error fetching image data:", error);
-        } finally {
-            setLoading(false);
-        }
-    };
+    if (loading) {
+        return <Loading />;
+    }
 
     const handleMother = (mother: string) => {
         const extractedArray =
@@ -82,10 +63,6 @@ const Litter = () => {
             ] || [];
         setLitterMother(extractedArray);
     };
-
-    useEffect(() => {
-        fetchImageData(litterMother);
-    }, [litterMother]);
 
     if (loading) {
         return <Loading />;
