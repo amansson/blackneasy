@@ -44,7 +44,7 @@ const Home = () => {
                 imageMother={"profile/Kimya_profile_2"}
                 imageFather={"profile/Dreamboy_profile"}
                 text={
-                    "12e Juni föddes valparna - 3 hannar och 2 tikar (Groenendael / Tervueren)"
+                    "Kimya parad Väntar valpar mars 2024 - Leverans klara maj."
                 }
                 images={imageData}
             />
