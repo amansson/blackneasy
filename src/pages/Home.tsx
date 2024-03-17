@@ -43,9 +43,7 @@ const Home = () => {
                 nameFather={"Dreamboy"}
                 imageMother={"profile/Kimya_profile_2"}
                 imageFather={"profile/Dreamboy_profile"}
-                text={
-                    "Kimya parad Väntar valpar mars 2024 - Leverans klara maj."
-                }
+                text={"Kimya har fött valpar mars 2024 - Leverans klara maj."}
                 images={imageData}
             />
 
