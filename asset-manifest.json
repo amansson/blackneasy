@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/blackneasy/static/css/main.ea265b95.css",
-    "main.js": "/blackneasy/static/js/main.276b36a2.js",
+    "main.js": "/blackneasy/static/js/main.2795ac1f.js",
     "index.html": "/blackneasy/index.html",
     "main.ea265b95.css.map": "/blackneasy/static/css/main.ea265b95.css.map",
-    "main.276b36a2.js.map": "/blackneasy/static/js/main.276b36a2.js.map"
+    "main.2795ac1f.js.map": "/blackneasy/static/js/main.2795ac1f.js.map"
   },
   "entrypoints": [
     "static/css/main.ea265b95.css",
-    "static/js/main.276b36a2.js"
+    "static/js/main.2795ac1f.js"
   ]
 }
