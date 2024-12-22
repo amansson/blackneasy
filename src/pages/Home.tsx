@@ -4,12 +4,11 @@ import { Cloudinary } from "@cloudinary/url-gen";
 import { fetchData } from "../utils/fetchData";
 import Loading from "../components/Loading";
 import { ImageDataType } from "../utils/types";
-import HeroPuppy from "../components/HeroPuppy";
 import ImageModal from "../components/ImageModal";
+import Christmas from "../components/Christmas";
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
-    const [imageData, setImageData] = useState<ImageDataType[]>([]);
     const [imageData2, setImageData2] = useState<ImageDataType[]>([]);
     const [selectedImage, setSelectedImage] = useState("");
 
@@ -28,7 +27,6 @@ const Home = () => {
     });
 
     useEffect(() => {
-        fetchData(setImageData, setLoading, "breed_kimya_dreamboy");
         fetchData(setImageData2, setLoading, "home");
     }, []);
 
@@ -38,15 +36,7 @@ const Home = () => {
 
     return (
         <>
-            <HeroPuppy
-                nameMother={"Kimya"}
-                nameFather={"Dreamboy"}
-                imageMother={"profile/Kimya_profile_2"}
-                imageFather={"profile/Dreamboy_profile"}
-                text={"Kimya har fött valpar mars 2024 - Leverans klara maj."}
-                images={imageData}
-            />
-
+            <Christmas />
             <div className="masonry-md xl:masonry-xl">
                 {imageData2.map((image: ImageDataType) => {
                     return (
