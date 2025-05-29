@@ -5,10 +5,11 @@ import { fetchData } from "../utils/fetchData";
 import Loading from "../components/Loading";
 import { ImageDataType } from "../utils/types";
 import ImageModal from "../components/ImageModal";
-import Christmas from "../components/Christmas";
+import HeroPuppy from "../components/HeroPuppy";
 
 const Home = () => {
     const [loading, setLoading] = useState(true);
+    const [imageData, setImageData] = useState<ImageDataType[]>([]);
     const [imageData2, setImageData2] = useState<ImageDataType[]>([]);
     const [selectedImage, setSelectedImage] = useState("");
 
@@ -27,6 +28,7 @@ const Home = () => {
     });
 
     useEffect(() => {
+        fetchData(setImageData, setLoading, "breed_brownie2");
         fetchData(setImageData2, setLoading, "home");
     }, []);
 
@@ -36,7 +38,14 @@ const Home = () => {
 
     return (
         <>
-            <Christmas />
+            <HeroPuppy
+                nameMother={"Brownie Tysk kleinspets"}
+                nameFather={""}
+                imageMother={"profile/Brownie_profile"}
+                imageFather={""}
+                text={"Valpar Bruna födda 24 april 2025"}
+                images={imageData}
+            />
             <div className="masonry-md xl:masonry-xl">
                 {imageData2.map((image: ImageDataType) => {
                     return (
