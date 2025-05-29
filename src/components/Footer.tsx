@@ -91,7 +91,7 @@ const Footer = () => {
             </div>
             <div className="flex flex-col-reverse justify-between pt-6 pb-8 border-t lg:flex-row px-16">
                 <p className="text-sm text-gray-600">
-                    © Copyright 2023 Black and Easy.
+                    © Copyright 2025 Black and Easy.
                 </p>
             </div>
         </div>
