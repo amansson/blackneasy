@@ -31,7 +31,7 @@ const router = createBrowserRouter([
         children: [
             {
                 path: "/blackneasy/",
-                element: <Home />,
+                element: <About />,
             },
             {
                 path: "/blackneasy/animal",
