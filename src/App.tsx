@@ -4,7 +4,6 @@ import "./index.css";
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import ErrorPage from "./components/ErrorPage.tsx";
 import Animal from "./pages/Animal.tsx";
-import Home from "./pages/Home.tsx";
 import Photo from "./pages/Photo.tsx";
 import About from "./pages/About.tsx";
 import Meetup from "./pages/Meetup.tsx";
